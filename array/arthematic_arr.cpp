@@ -2,6 +2,12 @@
 
 using namespace std;
 
+// An arithmetic array is an array that contains at least two integers and the
+// differences between consecutive integers are equal. For example, [9, 10], [3, 3, 3],
+// and [9, 7, 5, 3] are arithmetic arrays, while [1, 3, 3, 7], [2, 1, 2], and [1, 2, 4] are
+// not arithmetic arrays
+
+//return num of ele which forms a arthematic array ///IM{POTANT}
 //loop over the arrya and find the answer
 //step1; maintain prevoius diff and the current diff
 //step2; maintain current arthematic subarray length 
