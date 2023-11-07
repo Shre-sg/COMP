@@ -34,12 +34,12 @@ int uni(int a[],int n,int b[],int m){
     // }
 
     int count=1;
-    for(int i=0;i<(n+m);i++){       //count keeps the count of union ele by checing next numbers
-        if(c[i]!=c[i+1])
+    for(int i=0;i<(n+m);i++){       //count keeps the count of union ele by checing next numbers ie 
+        if(c[i]!=c[i+1])            //counting all unique ele
             count++;
     }
 
-    return count-1;
+    return count-1;   //count-1 because i amdoing count++ at last
 }
 
 int main(){

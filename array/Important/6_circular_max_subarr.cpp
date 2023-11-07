@@ -39,10 +39,12 @@ int main(){
 
     int wrapsum, nonwrapsum;
 
-    nonwrapsum=kadane(arr,n);
+    nonwrapsum=kadane(arr,n);  //normal max sum of sub arry
+
+
+    //now we do to find out the max sum of circular subaray
 
     //to find total sum and changeing sings
-   
     int totalsum=0;
     for(int i=0; i<n; i++){
         totalsum=totalsum+arr[i];
@@ -52,7 +54,7 @@ int main(){
 
      //max of subarr sum = total sum of array - (- sum of non contributing ele);
 
-    wrapsum = totalsum + kadane(arr, n);
+    wrapsum = totalsum + kadane(arr, n); //this kadae will give ele which should not be in the sum ie most -ve number
     cout<<max(wrapsum, nonwrapsum)<<endl;
 }   
 

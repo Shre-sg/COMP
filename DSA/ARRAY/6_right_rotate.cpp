@@ -17,7 +17,6 @@ void rotate(int arr[], int n)
         arr[i]=arr[i-1];
     }
     arr[0]=temp;  //resinging temp to 0th ele 
-    
 }
 
 int main()

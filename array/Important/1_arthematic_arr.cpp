@@ -26,8 +26,8 @@ int arr[100];
         cin>>arr[i];
     }
 
-    int prev_len =2; //acts a storing ans as well
-    int cur_len =2;
+    int prev_len =2; //acts a storing ans as well //stores the max vale of lenght of ele whosw diff is same
+    int cur_len =2;  ///stores the j & j-1 vale of lenght of ele whosw diff is same
 
     int pd = arr[1] - arr[0];
     int j=2; //index to start next 
@@ -37,12 +37,11 @@ int arr[100];
             cur_len++;
         }
         else{
-            pd == arr[j]- arr[j-1];
+            pd = arr[j]- arr[j-1];
             cur_len=2;
         }
         prev_len= max(prev_len, cur_len);
         j++;
-
     }
 
     cout<< prev_len<<endl;
