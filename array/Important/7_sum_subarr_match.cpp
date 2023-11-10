@@ -38,8 +38,7 @@ int main(){
 
     int i=0, j=0, st=-1, en=-1, sum=0;
 
-    while(j<n && sum+arr[j]<=key){  //breaks when the sum> key where " j index is noted" & 
-                                    //j reaches the  n end of array
+    while(j<n && sum+arr[j]<=key){  //breaks when the sum> key where " j index is noted" &                           //j reaches the  n end of array
         sum=sum+arr[j];
         j++;
     }
