@@ -71,7 +71,7 @@ int main(){
 
     int maxsum=INT16_MIN;
     int sum=0;
-    for(int i=0; i<n;i++){
+    for(int i=0; i<n; i++){
         sum=sum+arr[i];
         
         if(sum<0)
