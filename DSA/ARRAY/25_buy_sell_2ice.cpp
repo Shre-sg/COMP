@@ -46,15 +46,17 @@ public:
         int profit2 = INT_MIN;
         
         for(int i = 0; i < prices.size(); i++){  
+           
             buy1    = min(buy1, prices[i]);    //min ----> price we buy
             profit1 = max(profit1, prices[i] - buy1);  // max---> price we sell && prices-buy1 will give profit
+            
             buy2    = min(buy2, prices[i] - profit1);   //min ----> price we buy
             profit2 = max(profit2, prices[i] - buy2);  // max---> price we sell && prices-buy1 will give profit
         }
         
         return profit2;
     }
-};
+};  
 
 int main() {
     // Input the size of the array

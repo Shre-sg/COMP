@@ -3,7 +3,9 @@
 using namespace std;
 
 
-// Given an array arr[] of N non-negative integers representing the height of blocks. If width of each block is 1, compute how much water can be trapped between the blocks during the rainy season. 
+// Given an array arr[] of N non-negative integers representing the height of blocks.
+// If width of each block is 1, compute how much water can be trapped between 
+//the blocks during the rainy season. 
  
 
 // Example 1:
@@ -13,6 +15,7 @@ using namespace std;
 // arr[] = {3,0,0,2,0,4}
 // Output:
 // 10
+
 // Input:
 // N = 4
 // arr[] = {7,4,0,9}

@@ -29,11 +29,12 @@ using namespace std;
 
 bool subArrayExists(int arr[], int n)
 {
-    unordered_set<int> s{0};  //it is unordered map without the freq
+    unordered_set<int> s{0};  //it is unordered map without the freq  and intialised with sum 0 in side
     int sum = 0;
     for (int i = 0; i < n; i++)
     {
         sum += arr[i];
+
         if (s.find(sum) == s.end())
             s.insert(sum);
         else

@@ -31,6 +31,8 @@ using namespace std;
 // Explanation: As all the elements of array 
 // are same, so there is no inversion count.
 
+//https://youtu.be/AseUmwVNaoY?si=Jas1plhphoTJJ3sK
+
 
 class Solution {
 public:

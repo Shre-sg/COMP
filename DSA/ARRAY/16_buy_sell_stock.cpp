@@ -60,7 +60,7 @@ int main(){
 class Solution1 {
 public:
     int maxProfit(vector<int>& prices) {
-        int min_ = INT_MAX;
+        int min_ = INT_MAX; ///it bascially  day you bought price
         int max_profit = 0;
         int profit = 0;  //profit if sold at the ith day
         

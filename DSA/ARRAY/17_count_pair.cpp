@@ -2,10 +2,7 @@
 #include <unordered_map>
 using namespace std;
 
-
-
 // Given an array of N integers, and an integer K, find the number of pairs of elements in the array whose sum is equal to K.
-
 
 // Example 1:
 
@@ -25,10 +22,6 @@ using namespace std;
 // Output: 6
 // Explanation: 
 // Each 1 will produce sum 2 with any 1.
-
-
-
-
 
 
 

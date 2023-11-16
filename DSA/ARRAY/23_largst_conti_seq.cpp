@@ -58,7 +58,6 @@ int findLongestConseqSubseq(int arr[], int N) {
         else 
             cnt = 0;   //not found reset to zero
     } 
-    
     return maxi;
 }
 

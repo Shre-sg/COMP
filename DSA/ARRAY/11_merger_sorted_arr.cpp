@@ -21,10 +21,12 @@ using namespace std;
 
 void merge(int arr1[], int  arr2[], int n, int m) {
     
-    int i =n-1, j=0;
+    int i =n-1, j=0;  //cmparing the last ele of arr1 with arr2  to move all ele one arr to other
+                        //such that one arr contains all smaller ele comapred to other array    
+     
     while(i >= 0 && j<m) {
         if(arr1[i] > arr2[j]) {
-            swap(arr1[i],arr2[j]);
+            swap(arr1[i],arr2[j]);   //swapping if max ele from arr1 to min ele from arr2
             j++;
         }
         else {

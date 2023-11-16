@@ -90,7 +90,7 @@ int main(){
 // It's Correct output is: 
 // -2 
 
-    //    int ans = 0 , maxi = arr[0];
+    //   int ans = 0 , maxi = arr[0];
     //   for(int i = 0 ; i<n ; i++) {
     //       ans +=arr[i];
     //       if(ans>maxi) 
