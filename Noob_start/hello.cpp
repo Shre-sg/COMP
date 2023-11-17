@@ -5,7 +5,7 @@ int main()
     //std::cout<<"hello\n";
     cout<<"hello\n";
 
-
+    int noname;
     //read
     int m;
     cin>>m; //reads input 
@@ -16,5 +16,5 @@ int main()
 //if else statement is same 
 // if(){}
 // else{}
-// else if(){}
+// else if(){}f
 
