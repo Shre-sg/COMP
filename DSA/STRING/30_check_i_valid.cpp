@@ -53,7 +53,7 @@ class Solution{
                     string a=s.substr(0,i);  //send whatever we to check fun 
                     string b=s.substr(i,j-i);
                     string c=s.substr(j,k-j);
-                    string d=s.substr(k,n);
+                    string d=s.substr(k,n-1);
                     
                     if(isValid(a) && isValid(b) && isValid(c) && isValid(d)){  // cheching if valid
                         ans.push_back(a+"."+b+"."+c+"."+d); //string ans
