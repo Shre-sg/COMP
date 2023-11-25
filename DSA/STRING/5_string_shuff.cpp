@@ -4,7 +4,10 @@ using namespace std;
 
 // Checking valid shuffle of two Strings
 
-// Given two strings str1 and str2, and a third-string shuffle, determine if shuffle is a valid shuffle of str1 and str2, where a valid shuffle contains all characters from str1 and str2 occurring the same number of times, regardless of order. Print “YES” if valid, and “NO” otherwise.
+// Given two strings str1 and str2, and a third-string shuffle, 
+//determine if shuffle is a valid shuffle of str1 and str2, 
+//where a valid shuffle contains all characters from str1 and str2 occurring the same number
+// of times, regardless of order. Print “YES” if valid, and “NO” otherwise.
 
 // Examples: 
 

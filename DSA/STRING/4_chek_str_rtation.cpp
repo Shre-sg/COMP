@@ -1,11 +1,11 @@
 
 #include <iostream>
-#include <string>
+#include <string.h>
 #include<bits/stdc++.h>
 using namespace std;
 
-// Given two strings s and goal, return true if and only if s can become goal after some number of shifts on s.
-
+// Given two strings s and goal, return true if and only if s 
+//can become goal after some number of shifts on s.
 // A shift on s consists of moving the leftmost character of s to the rightmost position.
 
 // For example, if s = "abcde", then it will be "bcdea" after one shift.
@@ -29,12 +29,12 @@ public:
         if(s.size()!=goal.size()) 
             return false;
     
-        string ans=s+s;    // -->abcd     ----cdab
-                          // abcdabcd    check is adab is substring of abcdabcd
+        string ans=s+s;    //// abcdabcd check is adab is substring of abcdabcd  
+                             //-->abcd     ---->cdab     
         if(ans.find(goal)!=string::npos){
             return true;
-        }
-        else{
+        }   
+        else{ 
             return false;
         }
     }
@@ -43,10 +43,10 @@ public:
 
 int main() {
     Solution sol;
-    std::string s = "abcde";
-    std::string goal = "cdeab";
+    string s = "abcde";
+    string goal = "cdeab";
     bool result = sol.rotateString(s, goal);
-    std::cout << "Result: " << result << std::endl;
+    cout << "Result: " << result << endl;
     return 0;
 }
 
