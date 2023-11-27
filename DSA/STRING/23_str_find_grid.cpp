@@ -6,12 +6,16 @@ Video Solution : https://youtu.be/YOnbzPRfwF0
 
 */
 
-// Given a 2D grid of n*m of characters and a word, find all occurrences of given word in grid. A word can be matched in all 8 directions at any point. Word is said to be found in a direction if all characters match in this direction (not in zig-zag form). The 8 directions are, horizontally left, horizontally right, vertically up, vertically down, and 4 diagonal directions.
+// Given a 2D grid of n*m of characters and a word, find all occurrences of given word in grid.
+// A word can be matched in all 8 directions at any point. Word is said to be found in a direction if 
+//all characters match in this direction (not in zig-zag form). 
+//The 8 directions are, horizontally left, horizontally right, vertically up, vertically down, and 4 diagonal directions.
 
-// Note: The returning list should be lexicographically smallest. If the word can be found in multiple directions starting from the same coordinates, the list should contain the coordinates only once. 
+// Note: The returning list should be lexicographically smallest. If the word can be found in 
+//multiple directions starting from the same coordinates, the list should contain the coordinates 
+//only once. 
 
 // Example 1:
-
 // Input: 
 // grid = {{a,b,c},{d,r,f},{g,h,i}},
 // word = "abc"
@@ -19,8 +23,8 @@ Video Solution : https://youtu.be/YOnbzPRfwF0
 // {{0,0}}
 // Explanation: 
 // From (0,0) we can find "abc" in horizontally right direction.
-// Example 2:
 
+// Example 2:
 // Input: 
 // grid = {{a,b,a,b},{a,b,e,b},{e,b,e,b}}
 // word = "abe"
@@ -30,6 +34,11 @@ Video Solution : https://youtu.be/YOnbzPRfwF0
 // From (0,0) we can find "abe" in right-down diagonal. 
 // From (0,2) we can find "abe" in left-down diagonal. 
 // From (1,0) we can find "abe" in horizontally right direction.
+
+//a b a b   a             a
+//a b e b     b         b     a b e
+//e b e b       e     e
+
 // Your Task:
 // You don't need to read or print anything, Your task is to complete the function searchWord() which takes grid and word as input parameters and returns a list containing the positions from where the word originates in any direction. If there is no such position then returns an empty list.
 
@@ -46,11 +55,12 @@ using namespace std;
 class Solution {
 public:
 	vector<vector<int>>searchWord(vector<vector<char>>grid, string word){
-	    int dx[] = { -1 , 1 ,  0  , 0 , -1  , -1  ,  1  , 1  };  //dirctions
+	    
+		int dx[] = { -1 , 1 ,  0  , 0 , -1  , -1  ,  1  , 1  };  //dirctions
         int dy[] = { 0  , 0 , -1  , 1 , -1  ,  1  , -1  , 1  };
         
-        int n = grid.size();
-        int m = grid[0].size();
+        int n = grid.size();   ///row
+        int m = grid[0].size();   //col
         
         vector<vector<int>> ans;
         
@@ -62,7 +72,8 @@ public:
         };
         
         function<bool(int, int, int, int)> helper = [&](int x, int y, int dir, int p) -> bool {
-            if(p == word.size() - 1)
+            
+			if(p == word.size() - 1)
                 return 1;
                 
             if(valid(x + dx[dir], y + dy[dir], p + 1))
@@ -91,20 +102,28 @@ public:
 
 //{ Driver Code Starts.
 int main(){
+	
 	int tc;
 	cin >> tc;
+	
 	while(tc--){
 		int n, m;
 		cin >> n >> m;
+		
 		vector<vector<char>>grid(n, vector<char>(m,'x'));
+		
 		for(int i = 0; i < n; i++){
 			for(int j = 0; j < m; j++)
 				cin >> grid[i][j];
 		}
+		
 		string word;
 		cin >> word;
+		
 		Solution obj;
+		
 		vector<vector<int>>ans = obj.searchWord(grid, word);
+		
 		if(ans.size() == 0)
 		{
 		    cout<<"-1\n";
@@ -112,10 +131,10 @@ int main(){
 		else
 		{
 		    for(auto i: ans){
-			for(auto j: i)
-				cout << j << " ";
+				for(auto j: i)
+					cout << j << " ";
 			cout << "\n";
-		    }
+			}
 		}
 		
 		

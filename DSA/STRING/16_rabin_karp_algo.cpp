@@ -5,8 +5,12 @@ using namespace std;
 // Rabin Karp Algorithm
 // Before starting, let’s understand the hash function.
 
-// Hash Function: It’s a function that is used to map data to fixed values. Eg: A function that converts a big phone number to a small practical integer value. This function maps a big number or string to a small integer that can be used as the index in the hash table.
-// So, let’s define a Hash Function for our algorithm. Let’s denote each letter of the alphabet with a code like, a is represented by 1, b is represented by 2, c – 3, d-4, ….z=26.
+// Hash Function: It’s a function that is used to map data to fixed values. 
+//Eg: A function that converts a big phone number to a small practical integer value. 
+//This function maps a big number or string to a small integer that can be used as the index in 
+//the hash table.
+// So, let’s define a Hash Function for our algorithm. Let’s denote each letter of the alphabet with 
+//a code like, a is represented by 1, b is represented by 2, c – 3, d-4, ….z=26.
 
 // Let’s take an example of how this will help us. 
 

@@ -5,7 +5,10 @@ using namespace std;
 //thi  is basically the next permutaion code
 
 
-// Implement the next permutation, which rearranges the list of numbers into Lexicographically next greater permutation of list of numbers. If such arrangement is not possible, it must be rearranged to the lowest possible order i.e. sorted in an ascending order. You are given an list of numbers arr[ ] of size N.
+// Implement the next permutation, which rearranges the list of 
+//numbers into Lexicographically next greater permutation of list of numbers. 
+//If such arrangement is not possible, it must be rearranged to the lowest possible order i.e. 
+//sorted in an ascending order. You are given an list of numbers arr[ ] of size N.
 
 // Example 1:
 
@@ -42,23 +45,26 @@ public:
             {
                 k = i;
                 break;
-                
             }
         }
+        
         // agr k nhi mila to sidha reverse
         if(k == -1)
         {
-       reverse(arr.begin(),arr.end());
-       return arr;
+            reverse(arr.begin(),arr.end());
+                return arr;
         }
+        
         for(int i =N-1;i>=0;i--){
             if(arr[i] >arr[k])
             {
                 swap(arr[i],arr[k]);
-                break; // ab agla 
+                    break; // ab agla 
             }
         }
+        
         reverse(arr.begin()+k+1,arr.end());
+        
         return arr;
         
     }

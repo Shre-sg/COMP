@@ -50,13 +50,17 @@ vector<string>find_permutation(string s)
         }
 
 int main() {
+    
     string s;
     cout << "Enter a string: ";
     cin >> s;
+    
     vector<string> ans = find_permutation(s);
+    
     cout << "The permutations of the string are: " << endl;
     for (string p : ans) {
         cout << p << endl;
     }
+    
     return 0;
 }

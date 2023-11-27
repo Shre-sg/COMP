@@ -44,13 +44,25 @@ string printSequence(string arr[], string input)
 int main()
 {
     // storing the sequence in array
-    string str[]
+    string str[]                                                   //is basically matching char to number
         = { "2",   "22",  "222", "3",   "33",   "333", "4",
             "44",  "444", "5",   "55",  "555",  "6",   "66",
             "666", "7",   "77",  "777", "7777", "8",   "88",
             "888", "9",   "99",  "999", "9999" };
  
-    string input = "GEEKSFORGEEKS";
+    string input = "GEEKS FOR GEEKS";
     cout << printSequence(str, input);
     return 0;
 }
+
+
+// 0 -> " "
+// 1 ->*etc
+// 2 -> abc
+// 3 -> def
+// 4 ->ghi
+// 5 ->jkl
+// 6 ->mno
+// 7 ->pqrs
+// 8 ->tuv
+// 9 ->wxyz
