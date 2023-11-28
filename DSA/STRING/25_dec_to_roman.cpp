@@ -32,7 +32,7 @@ public:
         
 //         while(num!=0){
 //             while(map[l].first>num){   //do till we find when num>> map.first
-//                 l--;
+//                 l--;-
 //             }
 //             s += map[l].second;
 //             num -= map[l].first;

@@ -2,8 +2,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// Given a string S with repeated characters. The task is to rearrange characters in a string such that no two adjacent characters are the same.
-// Note: The string has only lowercase English alphabets and it can have multiple solutions. Return any one of them.
+// Given a string S with repeated characters. The task is to rearrange characters in a string such 
+//that no two adjacent characters are the same.
+// Note: The string has only lowercase English alphabets and it can have multiple solutions. 
+//Return any one of them.
 
 // Example 1:
 
@@ -56,10 +58,11 @@ class Solution
         
         for(auto it:map)  
         {
-            if( it.second > (n+1)/2)  /// as no of max char is greater than n+!/2 its not possible to balance
+            if( it.second > (n+1)/2)  /// as no of max char is greater than n+1/2 its not possible to balance
             {
                 return "-1";
             }
+
             pq.push(make_pair(it.second,it.first)); //pushing the pair to que
         }
         
@@ -77,17 +80,17 @@ class Solution
                 {
                     idx=1;  //straing to fill odd places 
                 }
+                
                 ans[idx]=top.second; //addind char to that postion
                 idx+=2;  //move from even ans odd 
                 top.first--; //decemnenting the freq
+            
             }
             
             pq.pop(); //pop out the top
         }
         
         return ans;
-        
-        
     }
        
 };
@@ -124,7 +127,7 @@ int main()
 //             pair<int, char> p1 = pq.top();
 //             pq.pop();
 //             p1.first--;
-//             ans += p1.second;                                    ///IMPO another way to manupulate
+//             ans += p1.second;                        ///IMPO another way to manupulate
             
 //             pair<int, char> p2 = pq.top();
 //             pq.pop();

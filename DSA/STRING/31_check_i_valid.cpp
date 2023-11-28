@@ -3,8 +3,11 @@
 using namespace std;
 
 
-// Given a string S containing only digits, Your task is to complete the function genIp() which returns a vector containing all possible combinations of valid IPv4 IP addresses and takes only a string S as its only argument.
-// Note: Order doesn't matter. A valid IP address must be in the form of A.B.C.D, where A, B, C, and D are numbers from 0-255. The numbers cannot be 0 prefixed unless they are 0.
+// Given a string S containing only digits, Your task is to complete the function genIp() 
+//which returns a vector containing all possible combinations of valid IPv4 IP addresses and 
+//takes only a string S as its only argument.
+// Note: Order doesn't matter. A valid IP address must be in the form of A.B.C.D,
+// where A, B, C, and D are numbers from 0-255. The numbers cannot be 0 prefixed unless they are 0.
 
 
 // For string 11211 the IP address possible are 
@@ -42,7 +45,7 @@ class Solution{
         int n=s.size();
         vector<string>ans;
         
-        if(n>12 || n<4){
+        if(n>12 || n<4){              //255.255.255.255    OR   // 1.1.1.1
             ans.push_back("-1");
             return ans;
         }
@@ -50,9 +53,10 @@ class Solution{
         for(int i=1;i<n-2;i++){
             for(int j=i+1;j<n-1;j++){
                 for(int k=j+1;k<n;k++){
-                    string a=s.substr(0,i);  //send whatever we to check fun 
-                    string b=s.substr(i,j-i);
-                    string c=s.substr(j,k-j);
+                     
+                    string a=s.substr(0,i);   ///doesnt include ith pos  
+                    string b=s.substr(i,j-i);   //includes i th pos
+                    string c=s.substr(j,k-j);   //send whatever we to check func 
                     string d=s.substr(k,n-1);
                     
                     if(isValid(a) && isValid(b) && isValid(c) && isValid(d)){  // cheching if valid

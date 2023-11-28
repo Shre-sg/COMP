@@ -3,7 +3,9 @@
 using namespace std;
 
 
-// You are given a string S of 2N characters consisting of N ‘[‘ brackets and N ‘]’ brackets. A string is considered balanced if it can be represented in the form S2[S1] where S1 and S2 are balanced strings. We can make an unbalanced string balanced by swapping adjacent characters.
+// You are given a string S of 2N characters consisting of N ‘[‘ brackets and N ‘]’ brackets.
+// A string is considered balanced if it can be represented in the form S2[S1] where S1 and
+// S2 are balanced strings. We can make an unbalanced string balanced by swapping adjacent characters.
 // Calculate the minimum number of swaps necessary to make a string balanced.
 
 // Note - Strings S1 and S2 can be empty.
@@ -27,13 +29,15 @@ using namespace std;
  
 
 // Your class definition here
-//ALGO :  is bacially hoow many extra bracket count is there that will be the ans
+//ALGO :  is bacially hoow many extra closing bracket count is there that will be the ans
 class Solution{   
 public:
     int minimumNumberOfSwaps(string S){
         // code here 
-       int extra=0;  //keeps count of extra closing brack
+        
+        int extra=0;  //keeps count of extra closing brack
         int ans=0;    // has ans after simplification  
+        
         for(auto i:S)
         {
             if(i=='[')

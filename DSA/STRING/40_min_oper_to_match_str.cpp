@@ -9,6 +9,8 @@ using namespace std;
 
 // Input:  A = "ABD", B = "BAD"
 // Output: 1
+
+
 // Explanation: Pick B and insert it at front.
 // Input:  A = "EACBD", B = "EABCD"
 // Output: 3
@@ -60,7 +62,7 @@ int transform(string A, string B)
 			i--;	 // move the pointer i to the left
 		}
 		i--;
-		j--;
+		j--; 
 	}
 return res; // returning result
 }

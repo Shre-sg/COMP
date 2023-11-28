@@ -34,9 +34,9 @@ using namespace std; // use the standard namespace
 
 
 class Solution{
-    public:
+    public:    //0    // 0   
     bool fun(int i, int j, int m , int n, string wild,string pattern)
-    {
+    {                           //m is wild size, n is pat,  
         
         if(i==m && j==n)
             return true;

@@ -5,7 +5,8 @@
 using namespace std;
 
 
-// Given a string 's'. The task is to find the smallest window length that contains all the characters of the given string at least one time.
+// Given a string 's'. The task is to find the smallest window length that contains all the 
+//characters of the given string at least one time.
 // For eg. A = aabcbcdbca, then the result would be 4 as of the smallest window will be dbca.
 
  
@@ -41,21 +42,27 @@ public:
         int i = 0, j = 0, ans = INT_MAX;
 
         while (j < str.size()) {
-            map1[str[j]]++;
+            map1[str[j]]++;    //new map 
 
             while (map1.size() == map.size()) {
                 ans = min(ans, j - i + 1);
                 map1[str[i]]--;
 
-                if (map1[str[i]] == 0)     //This code is needed to maintain the size of the map map1 
-                      map1.erase(str[i]);   //as the window slides. The map map1 stores the frequency of each character 
-                                            //in the current window. When you move the left pointer i forward, 
-                                                ///you decrease the frequency of the character str[i] by one. 
-                                                //If the frequency becomes zero, then you erase that character from the map. This way, you keep only the characters that 
-                                                //are present in the current window in the map. This helps you to check if the current window contains all characters of the pattern by 
-                                                //comparing the size of map1 and map. If they are equal, then it means that the current window is valid.
-                    
+                if (map1[str[i]] == 0)     
+                      map1.erase(str[i]);   
+                
                 i++;
+    //This code is needed to maintain the size of the map map1  
+    //as the window slides. The map map1 stores the frequency of each character                                       
+    //in the current window. When you move the left pointer i forward, 
+    ///you decrease the frequency of the character str[i] by one. 
+    //If the frequency becomes zero, then you erase that character from the map. 
+    //This way, you keep only the characters that 
+    //are present in the current window in the map. This helps you to 
+    //check if the current window contains all characters of the pattern by 
+    //comparing the size of map1 and map. If they are equal, then it means 
+    //that the current window is valid.
+                    
             }
             j++;
         }

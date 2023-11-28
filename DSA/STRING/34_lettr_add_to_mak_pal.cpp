@@ -57,10 +57,10 @@ int main()
 		}
 		else
 		{
-		cnt++;  //incerased as last should be removed to get palindrome
+			cnt++;  //incerased as last should be removed to get palindrome
 		
 		// erase the last element of the string  and check again palin
-		s.erase(s.begin() + s.length() - 1);  /// same as (s.lenght()-1)
+			s.erase(s.length() - 1);  /// same as (s.lenght()-1)
 		}
 	}
 	
