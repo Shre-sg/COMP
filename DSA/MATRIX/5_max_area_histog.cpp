@@ -70,6 +70,7 @@ class Solution {
 
         if (st.empty())
           rightsmall[i] = n - 1;
+        
         else
           rightsmall[i] = st.top() - 1;
 
@@ -108,7 +109,7 @@ int main() {
 //       maxArea = max(maxArea, minHeight * (j - i + 1));
 //     }
 //   }
-//   return maxArea;
+//   return maxArea;   
 // }
 // int main() {
 //   int arr[] = {2, 1, 5, 6, 2, 3, 1};

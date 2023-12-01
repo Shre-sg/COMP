@@ -86,9 +86,14 @@ class Solution{
         int maxArea = 0;
     vector<int> height(m, 0);
     for (int i = 0; i < n; i++) {
+        
         for (int j = 0; j < m; j++) {
-            if (M[i][j] == 1) height[j]++;
-            else height[j] = 0;
+          
+            if (M[i][j] == 1) 
+              height[j]++;
+            
+            else 
+              height[j] = 0;
         }
         int area = largestRectangleArea(height);
         maxArea = max(maxArea, area);

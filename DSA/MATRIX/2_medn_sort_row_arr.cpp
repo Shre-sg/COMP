@@ -5,7 +5,8 @@
 using namespace std;
 
 //WATCH TUF vid
-// Given a row wise sorted matrix of size R*C where R and C are always odd, find the median of the matrix.
+// Given a row wise sorted matrix of size R*C where R and C are always odd,
+// find the median of the matrix.
 
 // Example 1:
 
@@ -50,7 +51,8 @@ public:
 
         // Binary search to find the median.
         while (min_val < max_val) {
-            int mid_val = min_val + (max_val - min_val) / 2;
+            
+            int mid_val = min_val + (max_val - min_val) / 2;   //max +low /2
             int count = 0; // Count of elements less than or equal to mid_val
 
             // Count the number of elements less than or equal to mid_val in each row.

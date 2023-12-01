@@ -60,21 +60,21 @@ class Solution
                 ans.push_back(matrix[startRow][i]);
                 count++;
             }
-            startRow++; // 1
+            startRow++; // 1   IMOP
             
             //Print End Col
             for(int i =startRow; i<= endRow && count < total_element; i++) {
                 ans.push_back(matrix[i][endCol]);
                 count++;
             }
-            endCol--; // 2
+            endCol--; // 2    IMPO
             
             //Print End Row
             for(int i= endCol; i>=startCol && count < total_element; i--) {
                 ans.push_back(matrix[endRow][i]);
                 count++;
             }
-            endRow--;//2
+            endRow--;//2   IMPO 
             
             
             //Print Start Col
@@ -82,7 +82,7 @@ class Solution
                 ans.push_back(matrix[i][startCol]);
                 count++;
             }
-            startCol++; //1
+            startCol++; //1    IMPO
         }
         
         return ans;
@@ -90,7 +90,10 @@ class Solution
 };
 
 int main() {
-    vector<vector<int>> matrix = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}};
+    vector<vector<int>> matrix = {{1, 2, 3, 4}, 
+                                  {5, 6, 7, 8}, 
+                                  {9, 10, 11, 12}, 
+                                  {13, 14, 15, 16}};
     int r = 4, c = 4;
     vector<int> ans = Solution().spirallyTraverse(matrix, r, c);
     for (int i = 0; i < ans.size(); i++) {

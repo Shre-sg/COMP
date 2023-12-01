@@ -4,10 +4,10 @@
 using namespace std;
 
 
-// Given a boolean 2D array of n x m dimensions where each row is sorted. Find the 0-based index of the first row that has the maximum number of 1's.
+// Given a boolean 2D array of n x m dimensions where each row is sorted. 
+// Find the 0-based index of the first row that has the maximum number of 1's.
 
 // Example 1:
-
 // Input: 
 // N = 4 , M = 4
 // Arr[][] = {{0, 1, 1, 1},
@@ -19,7 +19,6 @@ using namespace std;
 // indexing).
 
 // Example 2:
-
 // Input: 
 // N = 2, M = 2
 // Arr[][] = {{0, 0}, {1, 1}}
