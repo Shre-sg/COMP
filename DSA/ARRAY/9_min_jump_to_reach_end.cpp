@@ -2,8 +2,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Given an array of N integers arr[] where each element represents the maximum length of the jump that can be made forward from that element. This means if arr[i] = x, then we can jump any distance y such that y ≤ x.
-// Find the minimum number of jumps to reach the end of the array (starting from the first element). If an element is 0, then you cannot move through that element.
+// Given an array of N integers arr[] where each element represents the maximum length of the jump 
+//that can be made forward from that element. This means if arr[i] = x, then we can jump any 
+//distance y such that y ≤ x.
+// Find the minimum number of jumps to reach the end of the array (starting from the first element). 
+//If an element is 0, then you cannot move through that element.
 
 // Note: Return -1 if you can't reach the end of the array.
 
@@ -50,6 +53,7 @@ int main(){
     }
         
     for(int i=0; i<n; i++){
+        
         max_ = max(max_,arr[i]+i);  ///arr[i]+i basically gives the totol index travellde by forloop
         
         if(i == maxrange){

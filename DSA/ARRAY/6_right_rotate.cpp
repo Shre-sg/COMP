@@ -13,9 +13,11 @@ using namespace std;
 void rotate(int arr[], int n)
 {
     int temp=arr[n-1];           //storing last ele in temp
+    
     for(int i=n-1; i>0; i--){  //shifting all ele to right
         arr[i]=arr[i-1];
     }
+    
     arr[0]=temp;  //resinging temp to 0th ele 
 }
 

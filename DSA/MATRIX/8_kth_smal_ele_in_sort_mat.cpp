@@ -65,7 +65,7 @@ int kthSmallest(int mat[MAX][MAX], int n, int k)
         
         
         if(count < k){
-            low = mid+1;   //if count value is low  look in the lef6t side
+            low = mid+1;   //if count value is low look in the lef6t side
         }
         else{
             high = mid;  // else look in left 
