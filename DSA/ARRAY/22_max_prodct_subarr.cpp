@@ -4,7 +4,8 @@
 using namespace std;
 
 
-// Given an array Arr[] that contains N integers (may be positive, negative or zero). Find the product of the maximum product subarray.
+// Given an array Arr[] that contains N integers (may be positive, negative or zero). 
+//Find the product of the maximum product subarray.
 
 // Example 1:
 
@@ -28,12 +29,14 @@ public:
 
 
     //algo is choose a -ve interger if exist such that it genartes prefix array and suffix array
-    //wew calculate the prefix product max & suffix product max; if 0 is present in array of refix and suffix array
+    //wew calculate the prefix product max & suffix product max; if 0 is present in array of prefix 
+    //and suffix array
     //we make the prefix and suffix to 1 and continue with the problem
     //at least get the mex of pre & suff retunr it
 
 	// Function to find maximum product subarray
 	long long maxProduct(vector<int> arr, int n) {
+        
         long long prefix = 1 , suffix = 1 ;  //stroes the max of prefix array && sufix subarray
         long long maxi = INT_MIN ;   //stores max product
         

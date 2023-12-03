@@ -2,7 +2,8 @@
 #include <unordered_map>
 using namespace std;
 
-// Given an array of N integers, and an integer K, find the number of pairs of elements in the array whose sum is equal to K.
+// Given an array of N integers, and an integer K, find the number of pairs of elements in the 
+//array whose sum is equal to K.
 
 // Example 1:
 
@@ -60,14 +61,19 @@ public:
 };  
 
 int main(){
+    
     Solution sol; // create an object of the Solution class
+    
     int arr1[] = {1, 5, 7, 1}; // test array 1
     int n1 = 4; // size of test array 1
     int k1 = 6; // target sum for test array 1
+    
     int arr2[] = {10, 12, 10, 15, -1, 7, 6, 5, 4, 2, 1, 1, 1}; // test array 2
     int n2 = 13; // size of test array 2
     int k2 = 11; // target sum for test array 2
+ 
     cout << sol.getPairsCount(arr1, n1, k1) << endl; // print the answer for test case 1
     cout << sol.getPairsCount(arr2, n2, k2) << endl; // print the answer for test case 2
+ 
     return 0;
 }

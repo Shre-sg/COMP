@@ -2,15 +2,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Given an integer N, find its factorial. return a list of integers denoting the digits that make up the factorial of N.
+// Given an integer N, find its factorial. return a list of integers denoting the digits that 
+//make up the factorial of N.
 
 // Example 1:
-
 // Input: N = 5
 // Output: 120
 // Explanation : 5! = 1*2*3*4*5 = 120
-// Example 2:
 
+// Example 2:
 // Input: N = 10
 // Output: 3628800
 // Explanation :

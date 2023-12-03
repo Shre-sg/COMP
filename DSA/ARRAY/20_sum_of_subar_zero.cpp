@@ -3,7 +3,8 @@
 
 using namespace std;
 
-// Given an array of positive and negative numbers. Find if there is a subarray (of size at-least one) with 0 sum.
+// Given an array of positive and negative numbers. Find if there is a subarray 
+//(of size at-least one) with 0 sum.
 
 // Example 1:
 // Input:
@@ -26,6 +27,7 @@ using namespace std;
 // in the array so there exist a 
 // subarray with sum 0.
 
+//seee nots
 
 bool subArrayExists(int arr[], int n)
 {
@@ -34,7 +36,6 @@ bool subArrayExists(int arr[], int n)
     for (int i = 0; i < n; i++)
     {
         sum += arr[i];
-
         if (s.find(sum) == s.end())
             s.insert(sum);
         else
