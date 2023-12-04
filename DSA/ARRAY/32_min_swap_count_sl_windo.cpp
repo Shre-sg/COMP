@@ -39,7 +39,7 @@ int minSwap(int arr[], int n, int k);
 // arr[] = {9, 7, 2, 5, 4, 7, 8}
 
 
-
+//basicallay min sawps required in given window size
 int main()
 {
     int arr[] = {2, 1, 5, 6, 3};
@@ -50,6 +50,7 @@ int main()
 }
 
 int minSwap(int arr[], int n, int k) {
+    
     int window=0, bad=0;
         
     for(int i=0; i<n; i++){

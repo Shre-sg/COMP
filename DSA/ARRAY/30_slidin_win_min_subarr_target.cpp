@@ -2,8 +2,8 @@
 #include <vector>
 using namespace std;
 
-// Given an array of positive integers nums and a positive integer target, return the minimal length of a 
-// subarray
+// Given an array of positive integers nums and a positive integer target, return the minimal length
+// of a subarray
 //  whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.
 
  
@@ -23,7 +23,6 @@ using namespace std;
 // Output: 0
 
 //IMPORTANT SLIDING WINDO TECQ
-
 class Solution {
 public:
     int minSubArrayLen(int target, vector<int>& nums) {

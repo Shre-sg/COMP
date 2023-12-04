@@ -9,13 +9,13 @@ using namespace std;
  
 
 // Example 1:
-
 // Input:
 // N = 6
 // arr[] = {3,0,0,2,0,4}
 // Output:
 // 10
 
+//example 3
 // Input:
 // N = 4
 // arr[] = {7,4,0,9}
@@ -26,8 +26,8 @@ using namespace std;
 // block of height 4 is 3 units and above 
 // block of height 0 is 7 units. So, the 
 // total unit of water trapped is 10 units.
-// Example 3:
 
+// Example 3:
 // Input:
 // N = 3
 // arr[] = {6,9,9}
