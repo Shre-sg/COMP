@@ -72,7 +72,7 @@ class Solution
       
       while(!qu.empty()){
           
-          Node* node = qu.front();
+          Node* node = qu.front();  
           rst.push_back(node->data);     //adding out ans
           
           qu.pop();       ///then pop it 
