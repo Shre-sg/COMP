@@ -80,7 +80,8 @@ struct Node {
 class Solution {
 public:
     vector<int> topView(Node *root) {
-       vector<int> v;
+        
+        vector<int> v;
         map<int,int> m;
         queue<pair<Node*,int>> q;
         
@@ -88,14 +89,14 @@ public:
         
         while(q.empty()==false){
             
-            auto p = q.front();
+            auto p = q.front();   // has the node
             q.pop();
             
             Node* curr = p.first;
-            int hd = p.second;
+            int hd = p.second;          ///hols the level 0 0r -1 or 1
             
-            if(m.find(hd)==m.end()){
-                m[hd] = curr->data;
+            if(m.find(hd)==m.end()){    //checking if the that lvl is present or not 
+                m[hd] = curr->data;     //if not there add to the the map
             }
             
             if(curr->left!=NULL){

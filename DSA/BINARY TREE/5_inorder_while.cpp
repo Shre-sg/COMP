@@ -40,7 +40,6 @@ void inorderIterative(Node* root)
             curr = stack.top();
             stack.pop();
             cout << curr->data << " ";
- 
             curr = curr->right;
         }
     }

@@ -36,7 +36,7 @@ void postorder(Node* root)
  
     // Display the data part of the root (or current node)
     cout << root->data << " ";
-}
+} 
  
  
 int main()
