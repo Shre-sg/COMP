@@ -13,7 +13,7 @@ using namespace std;
 // Input: root = [2,1,3]
 // Output: [2,3,1]
 // Example 3:
-
+  
 // Input: root = []
 // Output: []
 
