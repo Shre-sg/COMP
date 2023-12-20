@@ -7,7 +7,7 @@ struct Node {
     Node* right;
 };
 
-// The diameter of a tree (sometimes called the width) is the number of nodes on the longest path 
+//The diameter of a tree (sometimes called the width) is the number of nodes on the longest path 
 //between two end nodes. The diagram below shows two trees each with diameter nine, the leaves that 
 //form the ends of the longest path are shaded (note that there is more than one path in each 
 //tree of length nine, but no path longer than nine nodes). 
@@ -37,7 +37,7 @@ struct Node {
 // 1 <= Number of nodes <= 10000
 // 1 <= Data of a node <= 1000
 
-int solve(Node * root,int &ans){
+int solve(Node * root,int &ans){ // uts the height of the tree of tree func,
         
     if(root == NULL)
         return 0;
@@ -45,15 +45,15 @@ int solve(Node * root,int &ans){
     int left = solve(root->left,ans);
     int right = solve(root->right,ans);
 
-    ans  = max(ans,left+right+1);
+    ans  = max(ans,left+right+1);  //only this counts the width of the treee
 
     return max(left,right)+1;
 }
 
 int diameter(Node* root) {
-    int ans = 0;
+    int ans = 0;  ///stroes width
 
-    int res = solve(root,ans);
+    int res = solve(root,ans);  ///stores the height
 
     return ans;
 }

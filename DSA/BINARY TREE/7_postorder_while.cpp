@@ -40,7 +40,7 @@ void postorderIterative(Node* root)
         out.push(curr->data);
  
         // push the left and right child of the popped node into the stack
-        if (curr->left) {
+        if (curr->left) {     //only diff
             s.push(curr->left);
         }
  

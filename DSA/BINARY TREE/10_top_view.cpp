@@ -22,7 +22,7 @@ struct Node {
 //     /     \
 //    2       3
 //   /  \    /   \
-// 4    5  6   7
+//  4    5  6     7
 
 // Top view will be: 4 2 1 3 7
 // Note: Return nodes from leftmost node to rightmost node. Also if 2 nodes are outside the shadow
@@ -40,11 +40,12 @@ struct Node {
 // Example 2:
 
 // Input:
-//        10
-//     /      \
-//   20        30
-//  /   \    /    \
-// 40   60  90    100
+//         10 (0)
+//       /    \
+//   20(-1)     30(1)
+//    /   \      /    \
+// 40(-2) 60(0) 90(0) 100(2)
+
 // Output: 40 20 10 30 100
 // Your Task:
 // Since this is a function problem. You don't have to take input. 
@@ -100,7 +101,7 @@ public:
             }
             
             if(curr->left!=NULL){
-                q.push({curr->left,hd-1});
+                q.push({curr->left,hd-1}); //hd -1 or +1 is important all left child notes is -1 rest +1
             }
             
             if(curr->right!=NULL){

@@ -62,7 +62,7 @@ class Solution
 {
     public:
     //Function to return the level order traversal of a tree.
-     vector<int> levelOrder(Node* node)
+    vector<int> levelOrder(Node* node)
     {
       //Your code here
       vector<int> rst;    //to store ans

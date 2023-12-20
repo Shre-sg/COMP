@@ -35,8 +35,6 @@ struct Node {
 // 1 <= Data of a node <= 109
 
 
-
-
 int height(struct Node* node){
     
     if(node==NULL){           //very important do dery run
@@ -48,6 +46,7 @@ int height(struct Node* node){
     
     int ans = max(left,right) + 1;
     return ans;
+
 }
 
 int main() {

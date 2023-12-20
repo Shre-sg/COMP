@@ -19,13 +19,13 @@ using namespace std;
 // For the above tree, the bottom view is 5 10 3 14 25.
 // If there are multiple bottom-most nodes for a horizontal distance from root, then print the later one in level traversal. For example, in the below diagram, 3 and 4 are both the bottommost nodes at horizontal distance 0, we need to print 4.
 
-//                       20
-//                     /    \
-//                   8       22
-//                 /   \     /   \
-//               5      3 4     25
+//                       20  0
+ //                     /    \
+//               (-1)8        22(+1)
+//                 /   \       /    \
+//           (-2) 5    3(0)  4(0)   25(+1)
 //                      /    \      
-//                  10       14
+//                 (-1)10       14(1)
 
 // For the above tree the output should be 5 10 4 14 25.
 
@@ -114,7 +114,7 @@ public:
             Node* fir = it.first;           ///rember to do this
             int sec = it.second;
 
-            m[sec]=fir->data;           //first if it is not present  add to map
+            m[sec]=fir->data;           //first if it is not present  add to map  //only difff
                                         // if alreaedy present older one gets replaces tthat the algo
 
             if(fir->left != NULL){
