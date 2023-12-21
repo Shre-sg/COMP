@@ -116,7 +116,7 @@ public:
     
     void addLeft(Node * root,vector<int> &ans )
     {
-        if(!root || isLeaf(root))
+        if(!root || isLeaf(root))  //retunr is no there 
         {
             return;
         }
@@ -167,7 +167,6 @@ public:
     
     vector <int> boundary(Node *root)
     {
-        
         vector<int> ans;
         vector<int> temp;
         
@@ -177,9 +176,9 @@ public:
         if(!isLeaf(root)) 
             ans.push_back(root->data);
         
-        addLeft(root->left,ans);
-        addLeaf(root,ans);
-        addRight(root->right,temp);
+        addLeft(root->left,ans); //adding the left ones 
+        addLeaf(root,ans);  //send root we searxh leaf and add it to the leaf
+        addRight(root->right,temp);  //sending temp; so that we can reverse later
         
         for(int i=temp.size()-1;i>=0;i--)
         {

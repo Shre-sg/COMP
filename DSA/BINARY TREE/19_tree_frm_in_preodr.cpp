@@ -41,7 +41,8 @@ struct node * newNode(int data) {
 // Return root
 // Dry Run: To understand a detailed dry run of this approach, please watch the video attached below.
 
-
+//preoder first ele is root, look in inorder youll find whats leftof root & right of root
+// left inoreder---> ele<---inorder right()
 
 
 

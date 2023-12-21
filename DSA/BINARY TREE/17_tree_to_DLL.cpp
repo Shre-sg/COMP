@@ -37,7 +37,7 @@ struct Node {
 //       /   \
 //      20   30
 //    /   \
-//   40   60
+//   40   60 
 // Output:
 // 40 20 60 10 30 
 // 30 10 60 20 40
@@ -67,7 +67,7 @@ public:
         inorder(root->left, head, prev);    
 
         if (!prev) {       //if prev is  null
-            head = root;     //head moves around as we transverse     
+            head = root;     //head does not moves around as we transverse     
         }
         else {            // if prev is not null 
             root->left = prev;   //head node left is made to prev node 
