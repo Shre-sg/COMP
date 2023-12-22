@@ -1,5 +1,6 @@
 #include <iostream>
 #include <climits>
+using namespace std;
 
 // Assuming Node structure is defined somewhere
 struct Node {
@@ -79,13 +80,13 @@ public:
                 maxLen = len;
                 maxSum = sum;
             } else if (len == maxLen) {     ///if same level updaate sum again
-                maxSum = std::max(maxSum, sum);
+                maxSum = max(maxSum, sum);
             }
             return;
         }
 
         sum += root->data;   //calculating sum
-        solve(root->left, sum, len + 1);    //recusive call with lvl+1;
+        solve(root->left, sum, len + 1);    //recusive., call with lvl+1;
         solve(root->right, sum, len + 1);
     }
 

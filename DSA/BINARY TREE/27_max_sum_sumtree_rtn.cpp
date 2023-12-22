@@ -64,8 +64,10 @@ public:
     }
 
     int maxSumTree(Node* node) {
+        
         postorder(node);
         return max_;
+        
     }
 };
 

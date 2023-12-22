@@ -50,6 +50,9 @@ void Graph::addEdge(int v, int w) {
     adj[w].push_back(v);
 }
 
+
+
+
 bool Graph::isCyclicUtil(int v, bool visited[], int parent) {
     
     visited[v] = true;
@@ -69,7 +72,7 @@ bool Graph::isCyclicUtil(int v, bool visited[], int parent) {
 bool Graph::isTree() {
     bool* visited = new bool[V];
 
-    for (int i = 0; i < V; i++)
+    for (int i = 0; i < V; i++)  //
         visited[i] = false;
 
     if (isCyclicUtil(0, visited, -1))
