@@ -9,7 +9,8 @@ struct Node
     Node(int val) : data(val), next(nullptr) {}
 };
 
-// Find the first node of loop in linked list
+// https://youtu.be/X_kwcctaQ4M?si=7Np6pDOHPETgiglZ
+//  Find the first node of loop in linked list
 
 // Given a singly linked list of N nodes. Find the first node of
 // the loop if the linked list has a loop. If a loop is present return the node
