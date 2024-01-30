@@ -43,7 +43,7 @@ public:
 // Expected Auxiliary Space: O(N)
 
 // Constraints:
-// 1 <= N <= 10
+// 1 <= N <= 10 n
 
 // Define the Solution class
 class Solution
