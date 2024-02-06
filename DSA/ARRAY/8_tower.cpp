@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -8,11 +8,12 @@ using namespace std;
 
 // Increase the height of the tower by K
 // Decrease the height of the tower by K
-// Find out the minimum possible difference between the height of the shortest and tallest towers after you have modified each tower.
+// Find out the minimum possible difference between the height of the shortest and tallest towers after
+// you have modified each tower.
 
 // You can find a slight modification of the problem here.
-// Note: It is compulsory to increase or decrease the height by K for each tower. After the operation, the resultant array should not contain any negative integers.
-
+// Note: It is compulsory to increase or decrease the height by K for each tower. After the operation,
+// the resultant array should not contain any negative integers.
 
 // Example 1:
 
@@ -22,9 +23,9 @@ using namespace std;
 // Output:
 // 5
 // Explanation:
-// The array can be modified as 
-// {1+k, 5-k, 8-k, 10-k} = {3, 3, 6, 8}. 
-// The difference between 
+// The array can be modified as
+// {1+k, 5-k, 8-k, 10-k} = {3, 3, 6, 8}.
+// The difference between
 // the largest and the smallest is 8-3 = 5.
 // Example 2:
 
@@ -35,45 +36,48 @@ using namespace std;
 // 11
 // Explanation:
 // The array can be modified as
-// {3+k, 9+k, 12-k, 16-k, 20-k} -> {6, 12, 9, 13, 17}. 
-// The difference between 
-// the largest and the smallest is 17-6 = 11. 
+// {3+k, 9+k, 12-k, 16-k, 20-k} -> {6, 12, 9, 13, 17}.
+// The difference between
+// the largest and the smallest is 17-6 = 11.
 
-int main(){
+int main()
+{
     int n;
-    cin>>n;
+    cin >> n;
 
-    int arr[n],k;
-    cin>>k;
+    int arr[n], k;
+    cin >> k;
 
-    for(int i=0; i<n;i++){
-        cin>>arr[i];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
     }
 
-    sort(arr,arr+n); 
+    sort(arr, arr + n);
 
-    int min_=arr[0]; //minimum element at index 0
-    int max_= arr[n-1]; //maximum at last index
-    int ans=max_-min_; //difference 
-    
-    for(int i=1 ; i<n ;i++ ){ 
-        int a= arr[i-1]+k;
-        int b=arr[i]-k;
-        
-        if(b<0){
+    int min_ = arr[0];     // minimum element at index 0
+    int max_ = arr[n - 1]; // maximum at last index
+    int ans = max_ - min_; // difference
+
+    for (int i = 1; i < n; i++)
+    {
+        int a = arr[i - 1] + k;
+        int b = arr[i] - k;
+
+        if (b < 0)
+        {
             continue;
         }
-       
-        max_=max(arr[n-1]-k,a);
-        min_=min(arr[0]+k,b);
-        ans=min(ans,max_-min_);
-            
+
+        max_ = max(arr[n - 1] - k, a);
+        min_ = min(arr[0] + k, b);
+        ans = min(ans, max_ - min_);
     }
-    cout<<ans;
+    cout << ans;
 }
 
 // dry run this case
 // k=5, n=10
-// 2 6 3 4 7 2 10 3 2 1
+// 2 6 3 4 7 2 10 3 2 1/
 
 // ans=7;

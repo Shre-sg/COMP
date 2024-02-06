@@ -2,10 +2,8 @@
 #include <unordered_map>
 using namespace std;
 
-
-
-// Given an array of positive integers. Find the length of the longest sub-sequence such that 
-//elements in the subsequence are consecutive integers, the consecutive numbers can be in any order.
+// Given an array of positive integers. Find the length of the longest sub-sequence such that
+// elements in the subsequence are consecutive integers, the consecutive numbers can be in any order.
 
 // Example 1:
 // Input:
@@ -15,7 +13,7 @@ using namespace std;
 // 6
 // Explanation:
 // The consecutive numbers here
-// are 1, 2, 3, 4, 5, 6. These 6 
+// are 1, 2, 3, 4, 5, 6. These 6
 // numbers form the longest consecutive
 // subsquence.
 
@@ -33,31 +31,36 @@ using namespace std;
 // continuing seq; by checking for it in the hash map; i9f found increae the
 // ciount or reset the count ; while doing keep the tabs of the largest one
 
-int findLongestConseqSubseq(int arr[], int N) {
-    //Your code here
+int findLongestConseqSubseq(int arr[], int N)
+{
+    // Your code here
     int maxi = 0,
-    cnt = 0,
-    maxel = 0;
+        cnt = 0,
+        maxel = 0;
 
-    unordered_map<int, int> m; //add all ele it the map
+    unordered_map<int, int> m; // add all ele it the map
 
-    for (int i = 0; i < N; i++) {
-        m[arr[i]]++; //adding to map
-        maxel = max(maxel, arr[i]); //noting down the lagest ele
+    for (int i = 0; i < N; i++)
+    {
+        m[arr[i]]++;                // adding to map
+        maxel = max(maxel, arr[i]); // noting down the lagest ele
     }
 
-    for (int i = 0; i <= maxel; i++) { //algo starts from 0
-        if (m.find(i) != m.end()) { // if the ith ele is not found in the map it returns the ppointer to maps end;
-            cnt++;                      //counting the max continung array
-            maxi = max(maxi, cnt);   ///
-        } 
-        else 
-            cnt = 0;   //not found reset to zero
-    } 
+    for (int i = 0; i <= maxel; i++)
+    { // algo starts from 0
+        if (m.find(i) != m.end())
+        {                          // if the ith ele is not found in the map it returns the ppointer to maps end;
+            cnt++;                 // counting the max continung array
+            maxi = max(maxi, cnt); ///
+        }
+        else
+            cnt = 0; // not found reset to zero
+    }
     return maxi;
 }
 
-int main() {
+int main()
+{
     // Input the size of the array
     int N;
     cout << "Enter the size of the array: ";
@@ -65,7 +68,8 @@ int main() {
     // Input the elements of the array
     int arr[N];
     cout << "Enter the elements of the array: ";
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < N; i++)
+    {
         cin >> arr[i];
     }
     // Call the findLongestConseqSubseq method and store the result in an int
