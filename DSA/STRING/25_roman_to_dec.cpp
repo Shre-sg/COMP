@@ -2,15 +2,15 @@
 #include <string>
 #include <unordered_map>
 using namespace std;
-//https://youtu.be/Ydho2JPTI3Y?si=mkV4Mgo48GlmUKyT
-// Given a string in roman no format (s)  your task is to convert it to an integer . Various symbols and their values are given below.
-// I 1
-// V 5
-// X 10
-// L 50
-// C 100
-// D 500
-// M 1000
+// https://youtu.be/Ydho2JPTI3Y?si=mkV4Mgo48GlmUKyT
+//  Given a string in roman no format (s)  your task is to convert it to an integer . Various symbols and their values are given below.
+//  I 1
+//  V 5
+//  X 10
+//  L 50
+//  C 100
+//  D 500
+//  M 1000
 
 // Example 1:
 
@@ -20,38 +20,41 @@ using namespace std;
 // Example 2:
 
 // Input:
-// s = III 
+// s = III
 // Output: 3
 
-
 // note that ALL THE ROMAN HAS H9GHER TO LOWERS VALUE LETTR
-//IF HIGHER IS SECOD AND LOWER VALUE CHAR IS FIRST WE HAVE MINU THE LOWER VALUE IN ANS
+// IF HIGHER IS SECOD AND LOWER VALUE CHAR IS FIRST WE HAVE MINU THE LOWER VALUE IN ANS
 // The given code for the Solution class
-class Solution {
-  public:
-    int romanToDecimal(string &s) {
-       unordered_map<char,int> mymap{
-        {'I',1},
-        {'V',5},
-        {'X',10},
-        {'L',50},
-        {'C',100},
-        {'D',500},
-        {'M',1000},
+class Solution
+{
+public:
+    int romanToDecimal(string &s)
+    {
+        unordered_map<char, int> mymap{
+            {'I', 1},
+            {'V', 5},
+            {'X', 10},
+            {'L', 50},
+            {'C', 100},
+            {'D', 500},
+            {'M', 1000},
         };
         int value = 0;
-        for(int i=0;i<s.size();++i){    //TRAVERSING
-            if(mymap[s[i]] < mymap[s[i+1]])   //ALGO CHECK
-                value -= mymap[s[i]];    
+        for (int i = 0; i < s.size(); ++i)
+        {                                      // TRAVERSING
+            if (mymap[s[i]] < mymap[s[i + 1]]) // ALGO CHECK
+                value -= mymap[s[i]];
             else
                 value += mymap[s[i]];
         }
         return value;
-    }   
+    }
 };
 
 // The main function
-int main() {
+int main()
+{
     // Create an object of the Solution class
     Solution sol;
 
