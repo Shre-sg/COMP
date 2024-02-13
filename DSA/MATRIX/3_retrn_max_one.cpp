@@ -1,14 +1,13 @@
-#include<iostream>
-#include<bits/stdc++.h>
+#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-
-// Given a boolean 2D array of n x m dimensions where each row is sorted. 
+// Given a boolean 2D array of n x m dimensions where each row is sorted.
 // Find the 0-based index of the first row that has the maximum number of 1's.
 
 // Example 1:
-// Input: 
+// Input:
 // N = 4 , M = 4
 // Arr[][] = {{0, 1, 1, 1},
 //            {0, 0, 1, 1},
@@ -19,29 +18,33 @@ using namespace std;
 // indexing).
 
 // Example 2:
-// Input: 
+// Input:
 // N = 2, M = 2
 // Arr[][] = {{0, 0}, {1, 1}}
 // Output: 1
 // Explanation: Row 1 contains 2 1's (0-based
 // indexing).
 
-
-
-class Solution {
+class Solution
+{
 public:
-    int rowWithMax1s(vector<vector<int>> arr, int n, int m) {
+    int rowWithMax1s(vector<vector<int>> arr, int n, int m)
+    {
         int c;
         int mc = 0;
         int r = -1;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++)
+        {
             c = 0;
-            for (int j = 0; j < m; j++) {
-                if (arr[i][j] == 1) {
+            for (int j = 0; j < m; j++)
+            {
+                if (arr[i][j] == 1)
+                {
                     c++;
                 }
             }
-            if (c > mc) {
+            if (c > mc)
+            {
                 mc = c;
                 r = i;
             }
@@ -50,7 +53,8 @@ public:
     }
 };
 
-int main() {
+int main()
+{
     vector<vector<int>> arr = {{0, 1, 1, 1},
                                {0, 0, 1, 1},
                                {1, 1, 1, 1},
