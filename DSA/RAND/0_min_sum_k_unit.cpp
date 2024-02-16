@@ -75,3 +75,32 @@ int main()
         std::cout << "Minimum number of steps required: " << result << std::endl;
     return 0;
 }
+
+// Certainly! Let's break down the mathematics behind the minimumNumbers function.
+
+// The function aims to find the minimum number of steps required to reduce a given number num to a number divisible by 10 by subtracting k at each step.
+
+// Initial Checks:
+
+// The function checks if num is already 0. If it is, it returns 0 immediately because no steps are needed.
+// It then checks if k is 0 and num is not already divisible by 10. If this condition is met, it returns -1 because it's impossible to reach a number divisible by 10 by subtracting 0.
+// Subtraction Loop:
+
+// The function subtracts k from num.
+// It enters a loop where it continues subtracting k from num until num becomes negative or divisible by 10.
+// The loop also counts the number of steps taken in the variable i.
+// Result Evaluation:
+
+// If num becomes negative during the loop, it means it's not possible to reach a number divisible by 10, so the function returns -1.
+// Otherwise, it returns the count i of steps taken.
+// Now, let's analyze why this algorithm works mathematically:
+
+// We are given a starting number num, and we want to reach a number that is divisible by 10.
+// We subtract k from num repeatedly until we reach a number that is divisible by 10 or until num becomes negative.
+// At each step, k is subtracted, so the resulting number will be of the form num - k*x, where x is the number of steps taken.
+// We want to find the minimum number of steps x such that (num - k*x) is divisible by 10.
+// This problem can be seen as finding the smallest non-negative integer x such that (num - k*x) is divisible by 10.
+
+// If (num - k*x) is already divisible by 10, then we've found the solution, and x is the minimum number of steps.
+// If (num - k*x) is not divisible by 10, we continue subtracting k until we reach a number that is divisible by 10 or until num becomes negative.
+// Therefore, the algorithm essentially iterates by subtracting k from num until num becomes divisible by 10 or until it becomes negative, keeping track of the number of steps taken.
