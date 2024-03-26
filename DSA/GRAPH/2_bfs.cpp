@@ -70,7 +70,7 @@ vector<int> bfsOfGraph(int V, vector<int> adj[])
 int main()
 {
     int V = 5;          // Number of vertices
-    vector<int> adj[V]; // Adjacency list
+    vector<int> adj[V]; // Adjacency list   another way is
 
     // Adding edges
     adj[0].push_back(1);
