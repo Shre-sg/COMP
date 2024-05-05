@@ -1,0 +1,69 @@
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <limits>
+
+using namespace std;
+
+// striver algo
+class Solution
+{
+public:
+    // Function to find the shortest distance of all the vertices
+    // from the source vertex S.
+    vector<int> dijkstra(int V, vector<vector<int>> adj[], int S)
+    {
+        // Code here   //type ele          //type datastr         //compaision
+        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+        vector<int> dist(V, 1e9); // V is nof nodes in the graph
+        pq.push({0, S});
+        dist[S] = 0;
+
+        while (!pq.empty())
+        {
+            int dis = pq.top().first;
+            int node = pq.top().second;
+            pq.pop();
+
+            for (auto it : adj[node])
+            {
+                int adjdis = it[1];
+                int adjnode = it[0];
+
+                if (dis + adjdis < dist[adjnode])
+                {
+                    dist[adjnode] = dis + adjdis;
+                    pq.push({dist[adjnode], adjnode});
+                }
+            }
+        }
+
+        return dist;
+    }
+};
+
+int main()
+{
+    int V = 5; // Number of vertices
+    int S = 0; // Source vertex
+
+    // Adjacency list representation of the graph
+    vector<vector<int>> adj[V];
+    adj[0].push_back({1, 2});
+    adj[0].push_back({2, 4});
+    adj[1].push_back({2, 1});
+    adj[1].push_back({3, 7});
+    adj[2].push_back({4, 3});
+    adj[3].push_back({4, 1});
+
+    Solution obj;
+    vector<int> shortest_distances = obj.dijkstra(V, adj, S);
+
+    // Output shortest distances from the source vertex
+    for (int i = 0; i < V; i++)
+    {
+        cout << "Shortest distance from vertex " << S << " to vertex " << i << " is: " << shortest_distances[i] << endl;
+    }
+
+    return 0;
+}
