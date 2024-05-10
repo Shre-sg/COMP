@@ -41,13 +41,9 @@ public:
     // DFS function to detect cycle in an undirected graph.
     bool dfs(vector<int> adj[], vector<bool> &vis, int source, int parent)
     {
-        // Mark the current node as visited
         vis[source] = true;
-
-        // Iterate through all adjacent vertices of the current node
         for (auto u : adj[source])
         {
-            // If the adjacent vertex is not visited, recursively call dfs
             if (vis[u] == false)
             {
                 // Recursive call to dfs with the adjacent vertex
