@@ -5,24 +5,22 @@
 using namespace std;
 
 // Define the Node structure
-struct Node {
+struct Node
+{
     int data;
-    Node* left;
-    Node* right;
+    Node *left;
+    Node *right;
     Node(int value) : data(value), left(nullptr), right(nullptr) {}
 };
 
-
-// Given a binary tree of size  N, a node, and a positive integer k., Your task is to complete 
-//the function kthAncestor(), the function should return the kth ancestor of the given node 
-//in the binary tree. If there does not exist any such ancestor then return -1.
-// Note:
+// Given a binary tree of size  N, a node, and a positive integer k., Your task is to complete
+// the function kthAncestor(), the function should return the kth ancestor of the given node
+// in the binary tree. If there does not exist any such ancestor then return -1.
+// Note: read this
 // 1. It is guaranteed that the node exists in the tree.
 // 2. All the nodes of the tree have distinct values.
 
 // Example 1:
-
-
 
 // Input:
 // K = 2 Node = 4
@@ -36,7 +34,7 @@ struct Node {
 // Example 2:
 
 // Input:
-// k=1 
+// k=1
 // node=3
 //       1
 //     /   \
@@ -57,40 +55,43 @@ struct Node {
 // 1<= K <= 100
 // 1 <= Node.data <= N
 
+// Here, instead of 'values' vector to store ancestor node-values ,
+// we'll be having 'cnt' variable to track of ancestors encountered and 'val' variable to store
+//  final kth ancestor value.
 
+// We'll update 'val' variable only when 'cnt' becomes 0 because that will tell us that
+//  we are currently on the kth ancestor. Also , 'cnt' variable will only be updated once we find
+//  node with the given value as we'll be returning 1  , else 0.
 
-
-//Here, instead of 'values' vector to store ancestor node-values , 
-//we'll be having 'cnt' variable to track of ancestors encountered and 'val' variable to store
-// final kth ancestor value.
-
-//We'll update 'val' variable only when 'cnt' becomes 0 because that will tell us that
-// we are currently on the kth ancestor. Also , 'cnt' variable will only be updated once we find
-// node with the given value as we'll be returning 1  , else 0.
-
-//Here, 'cnt' variable is passed by reference to keep track of ancestors encountered and we
-// don't want to lose it when coming back from recusive calls. Also 'val' variable is passed by 
-///reference to store the value of kth ancestor value if found , and we don't want to lose it in
+// Here, 'cnt' variable is passed by reference to keep track of ancestors encountered and we
+//  don't want to lose it when coming back from recusive calls. Also 'val' variable is passed by
+/// reference to store the value of kth ancestor value if found , and we don't want to lose it in
 // recursive calls.
-//Traversal would be simply ' Preorder ' with slight variation.
+// Traversal would be simply ' Preorder ' with slight variation.
 // Function to create a new Node
-Node* createNode(int value) {
+Node *createNode(int value)
+{
     return new Node(value);
 }
 
-bool solve(Node* root, int& cnt, int& node, int& val) {
-    if (root == nullptr) return false;
+bool solve(Node *root, int &cnt, int &node, int &val)
+{
+    if (root == nullptr)
+        return false;
 
-    if (root->data == node) {
+    if (root->data == node)
+    {
         return true;
     }
     int l = solve(root->left, cnt, node, val);
 
     int r = solve(root->right, cnt, node, val);
 
-    if (l || r) {
+    if (l || r)
+    {
         cnt--;
-        if (cnt == 0) val = root->data;
+        if (cnt == 0)
+            val = root->data;
 
         return true;
     }
@@ -98,7 +99,8 @@ bool solve(Node* root, int& cnt, int& node, int& val) {
     return false;
 }
 
-int kthAncestor(Node* root, int k, int node) {
+int kthAncestor(Node *root, int k, int node)
+{
     int cnt = k;
     int val = -1;
 
@@ -107,9 +109,10 @@ int kthAncestor(Node* root, int k, int node) {
     return val;
 }
 
-int main() {
+int main()
+{
     // Create a sample binary tree
-    Node* root = createNode(1);
+    Node *root = createNode(1);
     root->left = createNode(2);
     root->right = createNode(3);
     root->left->left = createNode(4);
@@ -118,14 +121,17 @@ int main() {
     root->right->right = createNode(7);
 
     // Example usage of kthAncestor function
-    int k = 2;   // Replace with the desired value of k
+    int k = 2;    // Replace with the desired value of k
     int node = 5; // Replace with the desired value of node
 
     int result = kthAncestor(root, k, node);
 
-    if (result != -1) {
+    if (result != -1)
+    {
         cout << "The " << k << "th ancestor of node " << node << " is: " << result << endl;
-    } else {
+    }
+    else
+    {
         cout << "Node or ancestor not found." << endl;
     }
 
