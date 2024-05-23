@@ -131,3 +131,36 @@ int main()
 
     return 0;
 }
+// starting from 0;
+class Solution
+{
+public:
+    bool f(int n, vector<int> &arr, int sum, vector<vector<int>> &dp)
+    {
+
+        if (sum == 0)
+            return true;
+        if (n >= arr.size() || sum < 0)
+            return false;
+
+        if (dp[n][sum] != -1)
+            return dp[n][sum];
+
+        bool take = false;
+        if (arr[n] <= sum)
+        {
+            take = f(n + 1, arr, sum - arr[n], dp);
+        }
+
+        bool notTake = f(n + 1, arr, sum, dp);
+
+        return dp[n][sum] = take || notTake;
+    }
+
+    bool isSubsetSum(vector<int> arr, int sum)
+    {
+        int size = arr.size();
+        vector<vector<int>> dp(size, vector<int>(sum + 1, -1));
+        return f(0, arr, sum, dp);
+    }
+};
