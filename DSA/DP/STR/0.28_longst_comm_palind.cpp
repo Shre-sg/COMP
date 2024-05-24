@@ -56,6 +56,7 @@ public:
 
         vector<vector<int>> dp(n + 1, vector<int>(m + 1, -1));
         reverse(s.begin(), s.end());
+        // sending the og str and revs str
         return f(t, s, n - 1, m - 1, dp);
     }
 };

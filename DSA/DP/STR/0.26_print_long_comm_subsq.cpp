@@ -3,13 +3,9 @@
 using namespace std;
 
 // Print Longest Common Subsequence | (DP - 26)
-
 // Problem Statement:
-
 // Print Longest Common Subsequence
-
 // In the previous article Longest Common Subsequence, we learned to print the length of the longest common subsequence of two strings. In this article, we will learn to print the actual string of the longest common subsequence.
-
 // Prereq: Longest Common Subsequence+
 
 void lcs(string s1, string s2)
