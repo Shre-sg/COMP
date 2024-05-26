@@ -57,7 +57,7 @@ public:
         int notpick = 0 + f(ind - 1, n, price, dp);
 
         int pick = -1e9;
-        int roden = ind + 1; // arry index start from 0
+        int roden = ind + 1; // arry index start from 0  what rodlen suppsed to be at that indeax
 
         if (roden <= n)
             pick = price[ind] + f(ind, n - roden, price, dp);

@@ -94,6 +94,7 @@ int solveUtil(int ind, vector<int> &arr, vector<int> &dp)
     // Base cases
     if (ind == 0)
         return arr[ind];
+
     if (ind < 0)
         return 0;
 

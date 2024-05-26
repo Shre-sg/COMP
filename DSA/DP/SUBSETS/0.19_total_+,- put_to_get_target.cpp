@@ -143,3 +143,35 @@ int main()
 
     return 0; // Return 0 to indicate successful program execution
 }
+
+// Algorithm / Intuition
+// The first approach that comes to our mind is to generate all subsequences and try both options of placing ‘-’ and ‘+’ signs and count the expression if it evaluates the answer.
+// This surely will give us the answer but can we try something familiar to the previous problems we have solved?
+
+// The answer is yes! We can use the concept we studied in the following article Count Partitions with Given Difference (DP – 18).
+
+// The following insights will help us to understand intuition better:
+
+// If we think deeper, we can say that the given ‘target’ can be expressed as addition of two integers (say S1 and S2).
+// S1 + S2 = target   – (i)
+
+// Now, from where will this S1 and S2 come?  If we are given the array as [a,b,c,d,e], we want to place ‘+’ or ‘-’ signs in front of every array element and then add it. One example is :
+// +a-b-c+d+e which can be written as (+a+d+e) + (-b-c).
+
+// Therefore, we can say that S1=(+a+d+e) and S2=(-b-c) for this example.
+
+//  If we calculate the total sum of elements of the array (say totSum), we can can say that,
+// S1 = totSum - S2      – (ii)
+
+// Now solving for equations (i) and (iii), we can say that
+// S2 = (totSum - target)/2    – (iv)
+
+// Therefore this question is modified to “Count Number of subsets with sum (totSum - target)/2 ”. This is exactly what we had discussed in the article  Count Subsets with Sum K.
+
+// Edge Cases:
+
+// The following edge cases need to be handled:
+
+// As the array elements are positive integers including zero, we don’t want to find the case when S2 is negative or we can say that totSum is lesser than D, therefore if totSum<target, we simply return 0.
+// S2 can’t be a fraction, as all elements are integers, therefore if totSum - target is odd, we can return 0.
+// From here on we will discuss the approach to “Count Subsets with Sum K” with the required modifications. Moreover, as the array elements can also contain 0, we will handle it as discussed in part-1 of this article.

@@ -5,16 +5,20 @@
 // We are given an array ‘ARR’ with N positive integers. We need to find if we can partition the array into two subsets such that the sum of elements of each subset is equal to the other.
 
 // If we can partition, return true else return false.
-
+//
+//
+//
+//
+//
+//
+// IMPORTANT
 // Algorithm / Intuition
 // This question is a slight modification of the problem discussed in Subset-sum equal to target. We need to partition the array(say S) into two subsets(say S1 and S2). According to the question:
 
-// Sum of elements of S1 + sum of elements of S2 = sum of elements of S.
 // Sum of elements of S1 = sum of elements of S2.
 // These two conditions imply that S1 = S2 = (S/2).
 
 // Now,
-
 // If S (sum of elements of the input array) is odd , there is no way we can divide it into two equal halves, so we can simply return false.
 // If S is even, then we need to find a subsequence in the input array whose sum is equal to S/2 because if we find one subsequence with sum S/2, the remaining elements sum will be automatically S/2. So, we can partition the given array. Hence we return true.
 // Note: Readers are highly advised to watch this video “Recursion on Subsequences” to understand how we generate subsequences using recursion.

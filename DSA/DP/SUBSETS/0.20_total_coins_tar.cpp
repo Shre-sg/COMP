@@ -38,7 +38,7 @@ public:
 
         if (ind == 0)
         {
-            return (T % arr[0] == 0);
+            return (T % arr[0] == 0); // 1 if true 0 if false
         }
 
         if (dp[ind][T] != -1)

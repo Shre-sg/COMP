@@ -90,8 +90,7 @@ int minSumPath(int n, int m, vector<vector<int>> &matrix)
                 dp[i][j] = matrix[i][j]; // If we are at the top-left corner, the minimum path sum is the value at (0, 0)
             else
             {
-                // Calculate the minimum path sum considering moving up and moving left
-                int up = matrix[i][j];
+                int up = matrix[i][j]; // that ele + prev
                 if (i > 0)
                     up += dp[i - 1][j]; // Include the minimum path sum from above
                 else
@@ -103,7 +102,6 @@ int minSumPath(int n, int m, vector<vector<int>> &matrix)
                 else
                     left += 1e9; // A large value if moving left is not possible (out of bounds)
 
-                // Store the minimum path sum in dp[i][j]
                 dp[i][j] = min(up, left);
             }
         }

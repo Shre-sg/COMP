@@ -39,6 +39,7 @@ public:
     {
         if (amt < 0)
             return 1e9; // Handling negative amount
+
         if (ind == 0)
         {
             if (amt % coins[0] == 0)

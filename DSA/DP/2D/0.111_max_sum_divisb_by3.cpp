@@ -47,8 +47,8 @@ public:
             return dp[i][sum];
         }
 
-        int pick = nums[i] + solve(i + 1, nums, (sum + nums[i]) % 3, dp);
-        int notpick = solve(i + 1, nums, sum, dp);
+        int pick = nums[i] + solve(i + 1, nums, (sum + nums[i]) % 3, dp); //%3 is needed because sum maybr way too high  (space limit)
+        int notpick = 0 + solve(i + 1, nums, sum, dp);
 
         return dp[i][sum] = max(pick, notpick);
     }

@@ -39,7 +39,7 @@ void lcs(string s1, string s2)
     int i = n;
     int j = m;
 
-    int index = len - 1;
+    int index = len - 1; // this is commom lem
     string str = "";
     for (int k = 1; k <= len; k++)
     {

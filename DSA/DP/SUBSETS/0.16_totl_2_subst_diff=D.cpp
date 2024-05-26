@@ -9,21 +9,24 @@
 // Solution :
 // This question is a slight modification of the problem discussed in Count Subsets with Sum K.
 // We have the following two conditions given to us.
-// S1 + S2 = D   – (i)
+// S1 - S2 = D   – (i)
 // S1 >= S2     – (ii)
 //  If we calculate the total sum of elements of the array (say totSum), we can say that,
 // S1 = totSum - S2      – (iii)
 // Now solving for equations (i) and (iii), we can say that
 // S2 = (totSum - D)/2    – (iv)
 // Therefore the question “Count Partitions with a difference D” is modified to “Count Number of subsets with sum (totSum - D)/2 ”. This is exactly what we had discussed in the article  Count Subsets with Sum K.
-
+//
+// s1 - s2 = d
+//(total-s2) - s2 = d
+//(total - d) = 2*s2
+//(total-s)/2 = s2
+//
 #include <bits/stdc++.h>
-
 using namespace std;
 
 int findWaysUtil(int ind, int target, vector<int> &arr, vector<vector<int>> &dp)
 {
-
     if (ind == 0)
     {
         if (target == 0 && arr[0] == 0)
@@ -57,6 +60,5 @@ int main()
 
     vector<int> arr = {0, 0, 1};
     int k = 1;
-
     cout << "The number of subsets found are " << findWays(arr, k);
 }
