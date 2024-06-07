@@ -41,11 +41,11 @@ public:
 
         for (auto it = mp.begin(); it != mp.end();)
         {
-            if (it->second > 0)
+            if (it->second > 0) // if the maps freq is greater add them to group
             {
-                for (int i = 0; i < groupSize; i++)
+                for (int i = 0; i < groupSize; i++) // now i am looking for consecutive ele
                 {
-                    if (mp[it->first + i] > 0)
+                    if (mp[it->first + i] > 0) // if consecutive ele is missing ie does satify size of groupsize then return flase
                     {
                         mp[it->first + i]--;
                     }
@@ -57,7 +57,7 @@ public:
             }
             else
             {
-                it++;
+                it++; // incetemt the iteer
             }
         }
         return true;
