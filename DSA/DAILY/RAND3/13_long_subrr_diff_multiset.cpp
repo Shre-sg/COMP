@@ -50,13 +50,13 @@ using namespace std;
 class Solution {
 public:
     int longestSubarray(vector<int>& nums, int limit) {
-        multiset<int> ms;
+        multiset<int> ms; //its a sorted set
         int longest = 0;
         int l = 0;
         for (int r = 0; r < nums.size(); r++) {
             ms.insert(nums[r]);
-            int largest = *ms.rbegin();
-            int smallest = *ms.begin();
+            int largest = *ms.rbegin();  //retunrs a iterator ie derefrencing using *
+            int smallest = *ms.begin();  //retunrs a iterator ie derefrencing using *
             while (abs(largest - smallest) > limit) {
                 ms.erase(ms.find(nums[l]));
                 l++;
