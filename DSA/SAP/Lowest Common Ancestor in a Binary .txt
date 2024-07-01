@@ -1,0 +1,104 @@
+Lowest Common Ancestor in a Binary Tree
+Length of the longest substring without repeating characters
+Write a program to find the sum of contiguous subarray within a one-dimensional array of numbers that has the largest sum.
+Given a 2D array of size m*n, find the largest element for each row. We had to return a vector of size m.
+https://www.geeksforgeeks.org/bottom-view-binary-tree/
+https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/
+https://www.geeksforgeeks.org/c-program-to-count-positive-and-negative-numbers-in-an-array/
+https://www.geeksforgeeks.org/count-number-of-occurrences-or-frequency-in-a-sorted-array/
+Given an array and a value K, find the count of elements lesser than K.
+Given a 2D array of size M*N, find the largest element for each row. The answer will be an array of M values. This question was indirectly given in the form of the M*N array, where M denotes the no of products and N denotes the number of days. The ith row indicates the price of the product I for N days. The task is to find the highest price of each product for N days. 
+https://www.geeksforgeeks.org/puzzle-27-hourglasses-puzzle/
+Given an array and you have to print all the even numbers before all the odd numbers.
+Given an expression consisting of power and modulo terms. Basically, you have to use the fast power modulation method to find the value of the expression.
+Write an efficient program to find the sum of contiguous subarray within a one-dimensional array of numbers that has the largest https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/
+https://leetcode.com/problems/k-diff-pairs-in-an-array/
+https://leetcode.com/problems/can-make-palindrome-from-substring/
+Count all distinct pairs with a difference equal to K.
+Trapping rainwater problem.
+Write a program to find the sum of all sub-arrays of a given integer array.
+Write a program to print all the sub-sequences of a string in ascending order.
+Reductor Array: For two integer arrays, the comparator value is the total number of elements in the first array such that there exists no integer in the second array with an absolute difference less than or equal to d. Find the comparator value.
+Given a string text and a pattern with zero or more special character ‘*’ and ‘*’ can be mapped with any character, find the starting index of the first occurrence of pattern in the text.
+
+         eg: Input: text = “abcdefgh” and pattern “c*d”
+
+               Output: 2
+Given two arrays X and Y, and an integer D, find the number of elements X[i], such that the absolute difference between Y[j] for 0<=j<Y.size() and X[i] is greater than or equal to D.
+Given two array of strings X and Y, return a vector Z such that Z[i] corresponds to the number of elements need to be altered so as to make X[i] and Y[i] anagrams.
+Closest number in the array (absolute difference) and print each pair with that absolute difference in the new line.
+Find areas of any Shape with Ceiling value.
+Find the number of distinct palindromic sub strings in the given string
+Write a program to check if a number is the power of 2.
+
+
+
+Given a 2D binary matrix filled with 0’s and 1’s, find the largest square containing only 1’s and return its size (return N if it is NxN). Similar to https://leetcode.com/problems/maximal-square
+Given an array of integers nums and an integer threshold, we will choose a positive integer divisor and divide all the array by it and sum the result of the division. Find the smallest divisor such that the result mentioned above is less than or equal to the threshold. https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold
+Find the length of the longest subsequence of one string which is a substring of another string
+
+
+
+
+Given a string P consisting of small English letters and a 26-digit bit string Q where 1 represents the special character and 0 represents normal character for the 26 English Alphabets. The task is to find the length of the longest substring with at most K normal characters.
+
+interview
+
+1_In networks, they asked about OSI implementation in MS teams and Whatsapp conversations
+
+2_In OS they asked about paging, segmentation, race condition, deadlock In DSA they asked about Finding a loop in a linked list
+
+3_Round 1: The interviewer introduced himself, then asked for my introduction. Asked a few questions on subjects – 
+What are RAID systems? 
+Explain public key cryptography. 
+Explain digital certificates. 
+Explain polymorphism. 
+Difference between abstract class and interfaces.
+
+4_Round 2: Asked me to explain 1 project of my choice. 
+Some questions on OS – Multitasking vs Multiprocessing. 
+Some questions on limitations of multiprocessing. 
+Then gave 1 coding question – https://leetcode.com/problems/regular-expression-matching/. I explained the solution by drawing it out on Onenote. I was not asked to code it. Follow-ups – Edge cases, time complexity, data structure to be used here. 
+
+
+5_Questions are directly from GeeksforGeeks like you have to find the Kth smallest element in array in optimized way. So basic approach is just sort the array and find kth smallest element. But other approach is to use priority queue and using queue sort concept and they ask about basics of OOPS like polymorphism and encapsulation with real life example.
+Technical Round 2: Third round is again technical round. 
+Questions are from stack part. How to implement stack and in what concept stack works.
+They ask about primary key, candidate key and foreign key. Then they give one basic question to reverse a string using stack.
+
+6‑ I was asked to classify all human beings using OOP.
+
+n this round, he mainly focused on OOPs and 1 DSA question.
+Almost everything from OOPs like what is polymorphism, type, code it.(these types of questions for other OOPs properties too).
+1DSA question based on merge sort.
+
+7_he asked me Where do we use hashing in the OOPS concept? Again the interviewer cross-question on the same hashing concept
+After that, he asked me, Why can’t we use multiple inheritances in Java? This is one of the common questions that was asked in interviews
+Next, he asked me, Can we access the method of class without defining the objects? If yes then how?
+
+8_https://www.geeksforgeeks.org/print-leftmost-and-rightmost-nodes-of-a-binary-tree/
+What is heapify? and write pseudo code for it. First I told him the definition and why we use heapify and then I wrote a pseudo-code for it.
+What is operator overloading and overriding? First I gave him a definition and then I gave him an example explaining the difference between operator overloading and overriding.
+
+What are recursion and its types with code? I only know three types of recursion and he was satisfied with it
+
+9_What is runtime polymorphism? Explain with code. He wanted me to write the whole code and then explain it.
+4. https://www.geeksforgeeks.org/lowest-common-ancestor-binary-tree-set-1/
+5. https://www.geeksforgeeks.org/reverse-a-linked-list/
+6. https://www.geeksforgeeks.org/reverse-a-list-in-groups-of-given-size/
+4. https://www.geeksforgeeks.org/lowest-common-ancestor-binary-tree-set-1/
+5. https://www.geeksforgeeks.org/reverse-a-linked-list/
+6. https://www.geeksforgeeks.org/reverse-a-list-in-groups-of-given-size/
+https://www.geeksforgeeks.org/search-in-row-wise-and-column-wise-sorted-matrix/
+https://www.geeksforgeeks.org/find-element-array-sum-left-array-equal-sum-right-array/
+
+
+Q-1: You are given two arrays, earning and cost. An worker works for few days. Each day has a new pay per unit of work (earning) and a new cost per unit of food (cost). Working 1 unit costs 1 unit of energy, and eating 1 unit of food adds 1 unit of energy. Here are some constraints:
+The worker arrives with no money, but with energy. He can never have more energy than he arrives with, and it can never be negative.
+He can do any amount of work every day (possibly not do any work at all), limited only by his energy. He cannot work when his energy is zero.
+He can eat any amount of food every day (possibly not have any food at all), limited by the money he has. He cannot eat when the money he has is zero.
+He can eat food at the end of the day, and cannot return to work after eating. He can return to work on the next day.
+Calculate the maximum amount of money the worker can make.
+
+Q-2: Given a graph, where there is an edge between two vertices only if they are friends. Find the minimum of all friend factor of each trio. (trio is a triangle of 3 edges)
+Friend Factor : For each trio (3 nodes that are all connected to each other), the friend factor is defined as the sum of number of nodes that each of the three are connected to, other than each other.
