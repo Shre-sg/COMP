@@ -5,14 +5,16 @@ Given a 2D array of size m*n, find the largest element for each row. We had to r
 https://www.geeksforgeeks.org/bottom-view-binary-tree/
 https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/
 https://www.geeksforgeeks.org/c-program-to-count-positive-and-negative-numbers-in-an-array/
-
 https://www.geeksforgeeks.org/count-number-of-occurrences-or-frequency-in-a-sorted-array/
 Given an array and a value K, find the count of elements lesser than K.
 Given a 2D array of size M*N, find the largest element for each row. The answer will be an array of M values. This question was indirectly given in the form of the M*N array, where M denotes the no of products and N denotes the number of days. The ith row indicates the price of the product I for N days. The task is to find the highest price of each product for N days. 
+
 https://www.geeksforgeeks.org/puzzle-27-hourglasses-puzzle/
+
 Given an array and you have to print all the even numbers before all the odd numbers.
 Given an expression consisting of power and modulo terms. Basically, you have to use the fast power modulation method to find the value of the expression.
-Write an efficient program to find the sum of contiguous subarray within a one-dimensional array of numbers that has the largest https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/
+
+Write an efficient program to find the sum of contiguous subarray within a one-dimensional array of numbers that has the largest https://www.geeksforgeeks.org/largest-sum-contiguous-sub-array/
 https://leetcode.com/problems/k-diff-pairs-in-an-array/
 https://leetcode.com/problems/can-make-palindrome-from-substring/
 Count all distinct pairs with a difference equal to K.
