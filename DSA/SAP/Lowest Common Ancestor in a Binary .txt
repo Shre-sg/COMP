@@ -22,12 +22,15 @@ Trapping rainwater problem.
 Write a program to find the sum of all sub-arrays of a given integer array.
 Write a program to print all the sub-sequences of a string in ascending order.
 Reductor Array: For two integer arrays, the comparator value is the total number of elements in the first array such that there exists no integer in the second array with an absolute difference less than or equal to d. Find the comparator value.
+
 Given a string text and a pattern with zero or more special character ‘*’ and ‘*’ can be mapped with any character, find the starting index of the first occurrence of pattern in the text.
 
-         eg: Input: text = “abcdefgh” and pattern “c*d”
+         eg: Input: text = “acdbefgh” and pattern “c*d”
 
                Output: 2
+
 Given two arrays X and Y, and an integer D, find the number of elements X[i], such that the absolute difference between Y[j] for 0<=j<Y.size() and X[i] is greater than or equal to D.
+
 Given two array of strings X and Y, return a vector Z such that Z[i] corresponds to the number of elements need to be altered so as to make X[i] and Y[i] anagrams.
 Closest number in the array (absolute difference) and print each pair with that absolute difference in the new line.
 Find areas of any Shape with Ceiling value.
