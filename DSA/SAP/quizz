@@ -1,0 +1,11 @@
+1.Given a full binary tree with N internal nodes, what will be the number of leaf nodes?
+    If T has a total of N nodes, the number of internal nodes is I = (N – 1)/2.
+    If T has a total of N nodes, the number of leaves is L = (N + 1)/2.
+    There are a maximum of 2k nodes in level k for every k >= 0.
+    The binary tree with λ levels has maximum of 2λ-1 nodes.
+
+2.Number of three digit number where the digits occur in ascending order?
+    9C3
+
+3.Minimum number of variables required to swap values of two variables?
+    1 nomrally ot 0 using XOR
