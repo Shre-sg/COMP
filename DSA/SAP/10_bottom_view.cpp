@@ -78,7 +78,7 @@ public:
         map<int, int> mpp; //<line,data>
         queue<pair<Node *, int>> q;
 
-        q.push({root, 0});
+        q.push({root, 0}); //<node,line>
 
         // BFS traversal
         while (!q.empty())

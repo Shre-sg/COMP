@@ -28,7 +28,7 @@ using namespace std;
 // Dry Run: Let us dry-run the algorithm for a better understanding
 
 // Input : N = 5, array[] = {1, 2, -2, 4, -4}
-// Output : 5
+// Output : 4
 // Initially sum = 0, max = 0
 // HashMap<Integer, Integer> h = [ ];
 // i=0 -> sum=1, sum!=0 so check in the hashmap if we’ve seen a subarray with this sum before, in our case hashmap does not contain sum (1), so we add (sum, i) to the hashmap.

@@ -1,6 +1,23 @@
 // CPP program to count
 // subarrays having sum
 // less than k.
+
+// Number of subarrays having sum less than K
+// Last Updated : 19 Oct, 2022
+// Given an array of non-negative numbers and a non-negative number k, find the number of subarrays having sum less than k. We may assume that there is no overflow.
+
+// Examples :
+
+// Input : arr[] = {2, 5, 6}
+//         K = 10
+// Output : 4
+// The subarrays are {2}, {5}, {6} and
+// {2, 5},
+
+// Input : arr[] = {1, 11, 2, 3, 15}
+//         K = 10
+// Output : 4
+// {1}, {2}, {3} and {2, 3}
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -9,8 +26,7 @@ using namespace std;
 // less than k.
 int countSubarrays(int arr[], int n, int k)
 {
-    int start = 0, end = 0,
-        count = 0, sum = arr[0];
+    int start = 0, end = 0, count = 0, sum = arr[0];
 
     while (start < n && end < n)
     {

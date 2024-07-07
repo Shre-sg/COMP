@@ -100,7 +100,7 @@ using namespace std;
 int getLongestSubarray(vector<int> &a, int k)
 {
     int n = a.size(); // size of the array.
-
+    // <num,index>
     map<int, int> preSumMap;
     int sum = 0;
     int maxLen = 0;

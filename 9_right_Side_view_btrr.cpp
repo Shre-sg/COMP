@@ -66,13 +66,12 @@ private:
                 TreeNode *node = q.front();
                 q.pop();
 
-                // Update rightmost node value in que
+                // Update rightmost node value
                 rightmost = node->val; // important
 
-                // Push left and right children into queue, left and right oder is changed it leeds to left view
+                // Push left and right children into queue
                 if (node->left)
                     q.push(node->left);
-
                 if (node->right)
                     q.push(node->right);
             }

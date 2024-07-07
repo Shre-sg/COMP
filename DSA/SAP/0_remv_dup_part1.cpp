@@ -50,7 +50,7 @@ public:
             st.pop();
             res += c;
         }
-        // important res=res+char == res+=char needs reversing
+        // important res=res+c=har = res+=char needs reversing
         // res=char+res needs no reversing
         reverse(res.begin(), res.end());
         return res;

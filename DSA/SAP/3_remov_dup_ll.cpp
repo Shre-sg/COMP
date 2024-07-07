@@ -33,6 +33,7 @@ public:
     {
         if (!head)
             return nullptr;
+
         ListNode *dummy = new ListNode(-1);
         ListNode *h = dummy;
         while (head)

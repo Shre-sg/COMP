@@ -41,11 +41,15 @@ public:
         {
             int mid = i + (j - i) / 2;
             int sum = 0;
-            for (auto it : nums)
+            for (int it : nums)
             {
-                sum += (it / mid) + (it % mid != 0);
-                //(it % mid != 0) checks whether the remainder of dividing it by mid is nonzero.//If this condition is true, it means that it is not evenly divisible by mid.//In that case, we add 1 to the value of cnt.
+                sum += (it / mid);
+                if (it % mid != 0)
+                {
+                    sum += 1;
+                }
             }
+
             if (sum > threshold)
             {
                 i = mid + 1;

@@ -48,6 +48,7 @@ public:
         }
 
         vector<vector<string>> ans;
+
         // Extract the original strings grouped by their sorted versions
         for (auto x : mp)
         {

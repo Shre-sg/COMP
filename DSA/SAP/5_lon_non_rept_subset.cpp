@@ -64,6 +64,7 @@ public:
 //     int lengthOfLongestSubstring(string s) {
 //         int maxLength = 0;
 //         int left = 0;
+// //                   <char,index>
 //         unordered_map<char, int> lastSeen;
 
 //         for (int right = 0; right < s.length(); right++) {

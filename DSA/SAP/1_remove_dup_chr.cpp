@@ -43,6 +43,7 @@ public:
     string removeDuplicates(string s, int k)
     {
         stack<pair<char, int>> st;
+        // <chat, int> <char present, its occurance>;
 
         for (int i = 0; i < s.size(); ++i)
         {
