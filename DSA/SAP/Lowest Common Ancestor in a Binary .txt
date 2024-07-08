@@ -41,12 +41,11 @@ Write a program to check if a number is the power of 2.
 
 Given a 2D binary matrix filled with 0’s and 1’s, find the largest square containing only 1’s and return its size (return N if it is NxN). Similar to https://leetcode.com/problems/maximal-square
 Given an array of integers nums and an integer threshold, we will choose a positive integer divisor and divide all the array by it and sum the result of the division. Find the smallest divisor such that the result mentioned above is less than or equal to the threshold. https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold
+
 Find the length of the longest subsequence of one string which is a substring of another string
 
-
-
-
 Given a string P consisting of small English letters and a 26-digit bit string Q where 1 represents the special character and 0 represents normal character for the 26 English Alphabets. The task is to find the length of the longest substring with at most K normal characters.
+
 
 interview
 
