@@ -102,7 +102,6 @@ int stockProfit(vector<int> &Arr)
 int main()
 {
     vector<int> prices{4, 9, 0, 4, 10};
-
     cout << "The maximum profit that can be generated is " << stockProfit(prices) << endl;
     return 0;
 }
