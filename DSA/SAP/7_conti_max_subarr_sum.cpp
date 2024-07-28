@@ -19,6 +19,7 @@ using namespace std;
 // Output: 25
 // Explanation: The subarray {5,4,1,7,8} has the largest sum 25.
 
+// kadane algo
 class Solution
 {
 public:
