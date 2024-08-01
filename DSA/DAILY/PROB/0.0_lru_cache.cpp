@@ -1,5 +1,6 @@
 #include <iostream>
 #include <unordered_map>
+#include <bits/stdc++.h>
 using namespace std;
 
 // 146. LRU Cache
@@ -43,6 +44,66 @@ using namespace std;
 // 0 <= value <= 105
 // At most 2 * 105 calls will be made to get and put.
 
+// easy code
+class LRUCache
+{
+public:
+    int cap;
+    list<pair<int, int>> lst;
+    //(key, {key, value})
+    unordered_map<int, list<pair<int, int>>::iterator> cache;
+    LRUCache(int capacity)
+    {
+        this->cap = capacity;
+    }
+
+    int get(int key)
+    {
+
+        if (cache.find(key) == cache.end())
+        {
+            return -1;
+        }
+
+        auto it = cache[key];
+        int value = it->second;
+
+        lst.erase(it);
+
+        lst.push_front({key, value});
+        cache[key] = lst.begin();
+
+        return value;
+    }
+
+    void put(int key, int value)
+    {
+        if (cache.find(key) != cache.end())
+        {
+            auto it = cache[key];
+
+            lst.erase(it);
+
+            lst.push_front({key, value});
+            cache[key] = lst.begin();
+        }
+        else
+        {
+            if (lst.size() == cap)
+            {
+                auto last = lst.back();
+                cache.erase(last.first);
+                lst.pop_back();
+            }
+            lst.push_front({key, value});
+            cache[key] = lst.begin();
+        }
+    }
+};
+
+//
+//
+// FULL CODE
 class LRUCache
 {
 public:
