@@ -61,8 +61,10 @@ public:
 
         if (s[i] == p[j] || p[j] == '?')
             return dp[i][j] = f(i - 1, j - 1, s, p, dp);
+
         else if (p[j] == '*')
             return dp[i][j] = f(i, j - 1, s, p, dp) || f(i - 1, j, s, p, dp);
+
         return false;
     }
 

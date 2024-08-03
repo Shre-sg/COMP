@@ -50,6 +50,7 @@ public:
         // both characters match
         if (s1[ind1] == s2[ind2])
             return dp[ind1][ind2] = 1 + f(s1, s2, ind1 - 1, ind2 - 1, dp);
+
         else // characters do not match
             return dp[ind1][ind2] = max(f(s1, s2, ind1, ind2 - 1, dp), f(s1, s2, ind1 - 1, ind2, dp));
     }

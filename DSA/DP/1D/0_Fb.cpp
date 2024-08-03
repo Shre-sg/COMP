@@ -15,7 +15,6 @@ int f(int n, vector<int> &dp)
 
 int main()
 {
-
     int n = 5;
     vector<int> dp(n + 1, -1);
     cout << f(n, dp);

@@ -19,13 +19,19 @@ int minGenerations(vector<int> &layer)
         if (generations % 2 == 0)
         {
             if (_needed - 2 < 0)
+            {
+                generations++;
                 continue;
+            }
             _needed -= 2;
         }
         else
         {
             if (_needed - 1 < 0)
+            {
+                generations++;
                 continue;
+            }
             _needed -= 1;
         }
         generations++;
