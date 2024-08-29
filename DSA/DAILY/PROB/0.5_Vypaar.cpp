@@ -21,12 +21,9 @@ vector<int> solve(int N, int M, vector<int> req)
     {
         auto server = minHeap.top(); // Get the server with the minimum load
         minHeap.pop();
-
         results.push_back(server.second); // Store the server ID assigned to this task
-
-        server.first += req[i]; // Update the server's load with the current task's load
-
-        minHeap.push(server); // Push the updated server back into the heap
+        server.first += req[i];           // Update the server's load with the current task's load
+        minHeap.push(server);             // Push the updated server back into the heap
     }
 
     return results;

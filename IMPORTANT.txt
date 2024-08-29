@@ -233,31 +233,34 @@ int main() {
  
  
 	// 10 x 20 x 30 // int arr[10][20][30] 
-	vector<vector<vector<int>>> vec(10, vector<vector<int>> vec(20, vector<int> (30, 0));)
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+	vector<vector<vector<int>>> vec(10, vector<vector<int>> vec(20, vector<int> (30, 0));) 
 }
+
+
+//comparator
+auto comp = [](const pair<int, int> &a, const pair<int, int> &b) {
+        // Sort by the first element in descending order
+        if (a.first == b.first) {
+            // If first elements are equal, sort by the second element in ascending order
+            return a.second < b.second;
+        }
+        return a.first > b.first;
+    };
+
+    // Sort the vector using the custom comparator
+    sort(vec.begin(), vec.end(), comp);
+
  
- 
+ /// CUSTOM COMPARATOR
+auto comp = [](const pair<int, int> &a, const pair<int, int> &b)
+{
+    // Custom comparator for the priority queue
+    if (a.first == b.first)
+        return a.second < b.second;
+    return a.first > b.first;
+};
+
+priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(comp)> pq(comp);
  
  
  
